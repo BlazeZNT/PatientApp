@@ -1,0 +1,156 @@
+
+.container[data-v-e4e4508d] {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.logo-container[data-v-e4e4508d] {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.3125rem; /* Space between logo-container and text-container */
+}
+.header[data-v-e4e4508d] {
+  background-color: #2b1a88;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column; /* Ensures stacked layout */
+  align-items: center; /* Centers the logo */
+  position: relative;
+  height: 25%; /* Adjusted height for proportional spacing */
+  justify-content: space-evenly;
+}
+.back-button[data-v-e4e4508d] {
+  position: absolute;
+  left: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+.logo[data-v-e4e4508d] {
+  width: 4.6875rem;
+  height: 4.6875rem;
+  margin-top: 0.625rem; /* Adds spacing from the top */
+  margin-bottom: 0.3125rem; /* Adds spacing between the logo and title */
+  margin-left: 35%;
+}
+.content[data-v-e4e4508d] {
+  flex: 1;
+  padding: 1.25rem;
+}
+.text-container[data-v-e4e4508d] {
+  width: 100%;
+  padding-left: 0.625rem; /* Align text to the left */
+  margin-top: 0.3125rem; /* Add space between the logo and text */
+  display: flex;
+  flex-direction: column; /* Stack the title and subtitle vertically */
+  align-items: flex-start; /* Ensure both title and subtitle align to the left */
+  margin-bottom: 20px;
+}
+.title[data-v-e4e4508d] {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.3125rem; /* Add spacing between title and subtitle */
+}
+.subtitle[data-v-e4e4508d] {
+  font-size: 0.6875rem;
+  color: #d0d0d0;
+}
+.form .input[data-v-e4e4508d] {
+  width: 100%;
+  height: 2.8125rem;
+  margin-bottom: 0.625rem;
+  border: 0.03125rem solid #d8d8d8;
+  border-radius: 1.5625rem;
+  padding: 0 0.625rem;
+  font-size: 0.875rem;
+}
+.dropdown[data-v-e4e4508d] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.03125rem solid #d8d8d8;
+  border-radius: 1.5625rem;
+  height: 2.8125rem;
+  padding: 0 0.625rem;
+}
+.dropdown-placeholder[data-v-e4e4508d] {
+  font-size: 0.875rem;
+  color: #8c8c8c;
+}
+.dropdown-icon[data-v-e4e4508d] {
+  font-size: 0.875rem;
+  color: #8c8c8c;
+}
+.icon[data-v-e4e4508d]{
+	height: 10px;
+	width: 10px;
+}
+.footer[data-v-e4e4508d] {
+  padding: 0.625rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+.next-button[data-v-e4e4508d] {
+  display: flex;
+  width: 80%;
+  height: 2.8125rem;
+  background-color: #3724eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 1.40625rem;
+  justify-content: center;
+  align-items: center;
+}
+.back-arrow[data-v-e4e4508d]{
+	height: 20px;
+	width: 20px;
+}
+.list-item[data-v-e4e4508d] {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding: 0.625rem;
+  border: 0.03125rem solid #d8d8d8;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+  background-color: #f9f9f9;
+  position: relative; /* Allows absolute positioning for the radio image */
+}
+.info[data-v-e4e4508d] {
+  display: flex;
+  flex-direction: column; /* Stack title and description */
+  flex: 1; /* Allow the info section to take available space */
+}
+.goal-title[data-v-e4e4508d] {
+  font-size: 1.0625rem; /* Larger font for title */
+  font-weight: bold;
+  color: #2b1a88;
+}
+.goal-description[data-v-e4e4508d] {
+  font-size: 0.875rem; /* Smaller font for description */
+  color: #8c8c8c;
+  margin-top: 0.15625rem; /* Space between title and description */
+}
+.radio[data-v-e4e4508d] {
+  width: 1.25rem; /* Size of the radio button */
+  height: 1.25rem;
+  position: absolute; /* Align it to the rightmost side */
+  right: 0.625rem; /* Position it with some spacing from the edge */
+  top: 50%; /* Vertically center it */
+  transform: translateY(-50%); /* Ensure proper vertical alignment */
+}
+.icon[data-v-e4e4508d] {
+  width: 1.5625rem; /* Adjusted size for visibility */
+  height: 1.5625rem;
+  margin-right: 0.625rem; /* Space between icon and text */
+}
+
+

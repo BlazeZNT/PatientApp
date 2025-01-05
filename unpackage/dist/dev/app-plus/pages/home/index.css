@@ -1,0 +1,144 @@
+
+.navigation[data-v-b1827831] {
+  position: fixed;
+  width: 70%; /* Adjust width as needed for central alignment */
+  bottom: 0.625rem; /* Add a gap between the navigation and the bottom of the page */
+  left: 50%; /* Start from the horizontal center */
+  transform: translateX(-50%); /* Shift the navigation to align its center */
+  height: 3.125rem; /* Height of the navigation bar */
+  background-color: #17174b; /* Background color */
+  border-radius: 50px; /* Rounded corners for the navigation */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* Optional: shadow for a floating effect */
+}
+.nav-item[data-v-b1827831] {
+  position: relative; /* Required for placing the active background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Ensures equal spacing between items */
+  text-align: center;
+}
+.active-bg[data-v-b1827831] {
+  position: absolute;
+  width: 1.875rem; /* Larger than the icon */
+  height: 1.875rem; /* Larger than the icon */
+  background-color: #3724eb; /* Background color for active tab */
+  border-radius: 50%; /* Circle shape */
+  z-index: -1; /* Places it behind the icon */
+}
+.icon[data-v-b1827831] {
+  width: 1.25rem; /* Size of the icon */
+  height: 1.25rem; /* Size of the icon */
+  z-index: 1; /* Ensure icon appears above the background */
+}
+
+
+.container[data-v-4978fed5] {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+.header[data-v-4978fed5] {
+  background-color: #2b1a88;
+  padding: 0.625rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.title[data-v-4978fed5] {
+  margin-top: 1.875rem;
+  font-size: 1.125rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+.tab-buttons[data-v-4978fed5] {
+  display: flex;
+  width: 50%;
+  justify-content: center; /* Optional: centers the buttons */
+  align-items: center;
+  background-color: #17174b;
+  border-radius: 5px;
+  padding: 5px; /* Padding around the buttons for spacing */
+}
+.tab-button[data-v-4978fed5] {
+  background-color: transparent; /* Transparent background for inactive buttons */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 12px; /* Font size remains consistent */
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-button.active[data-v-4978fed5] {
+  background-color: #3724eb; /* Background for the active tab */
+  color: white; /* Active tab text color */
+  transform: scale(0.9); /* Scale down the size of the active button */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better emphasis */
+}
+.daily-average[data-v-4978fed5] {
+  padding: 0.625rem;
+  text-align: left;
+  background-color: #2b1a88;
+  color: white;
+}
+.daily-title[data-v-4978fed5] {
+  font-size: 0.875rem;
+  color: #b3b3b3;
+}
+.Btmline[data-v-4978fed5]{
+	margin-top: 10px;
+}
+.daily-value[data-v-4978fed5] {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.daily-unit[data-v-4978fed5] {
+  font-size: 0.75rem;
+}
+.graph-image[data-v-4978fed5] {
+  height:14vh;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.stats-grid[data-v-4978fed5] {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9375rem;
+  padding: 0.625rem;
+  background-color: #f9f9f9;
+  margin-top: 0.9375rem;
+}
+.cardtop[data-v-4978fed5]{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.stat-card[data-v-4978fed5] {
+  background-color: white;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+  box-shadow: 0 0.0625rem 0.15625rem rgba(0, 0, 0, 0.1);
+}
+.icon uni-image[data-v-4978fed5] {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.stat-title[data-v-4978fed5] {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.625rem;
+  font-size: 0.75rem;
+  color: #2b1a88;
+}
+.stat-value[data-v-4978fed5] {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #2b1a88;
+}
+

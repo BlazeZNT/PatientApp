@@ -1,0 +1,76 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/login/logincompile",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/Bookappointment",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#0034EE",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"iconWidth": "12px",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/tabbar/home.png",
+			"selectedIconPath": "/static/tabbar/home-select.png",
+			"text": "Dashboard"
+		}, {
+			"pagePath": "pages/record/index",
+			"iconPath": "/static/tabbar/record.png",
+			"selectedIconPath": "/static/tabbar/record-select.png",
+			"text": "Record"
+		}, {
+			"pagePath": "pages/index/profile",
+			"iconPath": "/static/tabbar/profile.png",
+			"selectedIconPath": "/static/tabbar/profile-select.png",
+			"text": "Profile"
+		}]
+	},
+	"uniIdRouter": {}
+}

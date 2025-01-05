@@ -1,0 +1,103 @@
+
+.next-button[data-v-fdcc9251] {
+  display: flex;
+  width: 80%;
+  height: 2.8125rem;
+  background-color: #3724eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 1.40625rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+
+.container[data-v-04ced37b] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 0.625rem;
+}
+.success-icon-container[data-v-04ced37b] {
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+}
+.success-icon[data-v-04ced37b] {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.success-message[data-v-04ced37b] {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0.9375rem;
+}
+.title[data-v-04ced37b] {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #2b1a88;
+  margin-bottom: 0.46875rem;
+}
+.subtitle[data-v-04ced37b] {
+  font-size: 0.875rem;
+  color: #8c8c8c;
+  line-height: 1.25rem;
+}
+.goals-summary[data-v-04ced37b] {
+  width: 90%;
+  background-color: transparent;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
+  margin-top: 0.9375rem;
+  border: 1px solid #818898;
+}
+.goal-item[data-v-04ced37b] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.78125rem;
+}
+.goal-item[data-v-04ced37b]:last-child {
+  margin-bottom: 0; /* Remove margin from the last child */
+}
+.goal-icon uni-image[data-v-04ced37b] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.goal-info[data-v-04ced37b] {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0.625rem;
+}
+.goal-title[data-v-04ced37b] {
+  font-size: 0.875rem;
+  color: #2b1a88;
+}
+.goal-value[data-v-04ced37b] {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #818898;
+}
+.start-now-container[data-v-04ced37b] {
+  margin-top: 1.5625rem;
+  width: 100%;
+}
+.start-now-button[data-v-04ced37b] {
+  display: flex;
+  width: 80%;
+  height: 2.8125rem;
+  background-color: #3724eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 1.40625rem;
+  justify-content: center;
+  align-items: center;
+}
