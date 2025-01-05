@@ -36,7 +36,42 @@
 			}
 		},
 		{
-			"path" : "pages/telemedicine/Bookappointment",
+			"path" : "pages/telemedicine/video",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/patientdetails",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/chat",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/doctordetails",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/completeAppointment",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/bookappointment",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"

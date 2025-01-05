@@ -28,7 +28,7 @@ const navItems = [
 
 const navigateTo = (item) => {
   activeTab.value = item.name;
-  uni.navigateTo({
+  uni.redirectTo({
     url: item.route,
   });
 };

@@ -3,78 +3,48 @@
     <!-- Header Section -->
     <view class="header">
       <view class="header-left">
-        <image src="/static/back-arrow.png" class="back-arrow" @click="goBack" />
+        <image src="/static/arrow-left.png" class="back-arrow" @click="goBack" />
       </view>
       <text class="title">Book Appointment</text>
       <view class="header-right">
         <image src="/static/bell.png" class="bell-icon" />
       </view>
     </view>
-
     <!-- Tabs -->
-    <view class="tab-container">
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'My Appointment' }"
-          @click="setActiveTab('My Appointment')"
-        >
-          My Appointment
-        </button>
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'Consult Now' }"
-          @click="setActiveTab('Consult Now')"
-        >
-          Consult Now
-        </button>
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'History' }"
-          @click="setActiveTab('History')"
-        >
-          History
-        </button>
-      </view>
+
 
     <!-- Appointment List -->
     <view class="appointment-list">
+		<view class="subtitle">
+			<h2>Available Doctors</h2>
+		</view>
       <view
         v-for="(appointment, index) in appointments"
         :key="index"
         class="appointment-card"
       >
         <view class="card-content">
-          <image :src="appointment.image" class="doctor-image" />
+          <view class="image-container">
+                <image :src="appointment.image" class="doctor-image" />
+                <view
+                  v-if="appointment.live === 'True'"
+                  class="live-badge"
+                >
+                  LIVE
+                </view>
+          </view>
           <view class="appointment-info">
             <text class="doctor-name">{{ appointment.name }}</text>
             <text class="doctor-specialty">{{ appointment.specialty }}</text>
-            <text v-if="appointment.status === 'HAPPEN NOW'" class="appointment-status">
-              HAPPEN NOW
-            </text>
-            <text v-else class="appointment-time">
-              {{ appointment.date }} • {{ appointment.time }}
-            </text>
           </view>
           <view class="appointment-actions">
-            <button class="consult-button">Consult Now</button>
+            <button class="consult-button" @click="bookappointment">Set Appointment</button>
           </view>
         </view>
         <!-- Reschedule and Cancel Buttons -->
-        <view
-          v-if="appointment.status !== 'HAPPEN NOW'"
-          class="extra-actions"
-        >
-			<button class="reschedule-action">Reschedule</button>
-			<view class="divider"></view>
-			<button class="cancel-action">Cancel</button>
-        </view>
       </view>
     </view>
 	<view class="footer">
-	    <mybutton text="Book An Appointment" class="appointment-button" />
-	    <view class="icon-container">
-	      <image src="/static/vector.png" class="bell-icon" />
-	    </view>
 	  </view>
 
   </view>
@@ -94,6 +64,7 @@ const appointments = [
     status: "HAPPEN NOW",
     date: "",
     time: "",
+	live: "True"
   },
   {
     image: "/static/doctor2.png",
@@ -102,13 +73,39 @@ const appointments = [
     status: "Upcoming",
     date: "07/12/2024",
     time: "10:00 am",
+	live: "True"
+  },
+  {
+    image: "/static/doctor2.png",
+    name: "Dr. Richardson",
+    specialty: "Immunologist",
+    status: "HAPPEN NOW",
+    date: "",
+    time: "",
+  },
+  {
+    image: "/static/doctor2.png",
+    name: "Dr. Richard Lee",
+    specialty: "Cardiologist",
+    status: "Upcoming",
+    date: "07/12/2024",
+    time: "10:00 am",
+	live: "True"
   },
 ];
 
 const goBack = () => {
-  console.log("Go Back to Previous Page");
+	uni.reLaunch({
+	  url: '/pages/telemedicine/index'
+	});
 };
 
+const bookappointment = () => {
+  console.log("clicked")
+  uni.navigateTo({
+  	url: '/pages/telemedicine/patientdetails'
+  })
+};
 const setActiveTab = (tab) => {
   activeTab.value = tab;
 };
@@ -145,6 +142,12 @@ const setActiveTab = (tab) => {
   font-size: 36rpx;
   font-weight: bold;
   color: black;
+}
+
+	
+.subtitle{
+	font-size: 20rpx;
+	margin-bottom: 20rpx;
 }
 
 .back-arrow {
@@ -210,11 +213,31 @@ const setActiveTab = (tab) => {
   padding: 30rpx; /* Padding only applies to the main card content */
 }
 
+.image-container {
+  position: relative; /* Make this the reference for the live badge */
+  display: inline-block;
+}
+
 .doctor-image {
   width: 100rpx;
   height: 100rpx;
-  border-radius: 5rpx;
+  border-radius: 10rpx; /* Optional rounded corners */
   margin-right: 20rpx;
+}
+
+.live-badge {
+  position: absolute;
+  bottom:  -10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: bold;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
 
 .appointment-info {

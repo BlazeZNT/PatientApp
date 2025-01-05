@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <view class="header">
       <view class="header-left">
-        <image src="/static/back-arrow.png" class="back-arrow" @click="goBack" />
+        <image src="/static/arrow-left.png" class="back-arrow" @click="goBack" />
       </view>
       <text class="title">Appointment</text>
       <view class="header-right">
@@ -13,28 +13,28 @@
 
     <!-- Tabs -->
     <view class="tab-container">
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'My Appointment' }"
-          @click="setActiveTab('My Appointment')"
-        >
-          My Appointment
-        </button>
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'Consult Now' }"
-          @click="setActiveTab('Consult Now')"
-        >
-          Consult Now
-        </button>
-        <button
-          class="tab-button"
-          :class="{ active: activeTab === 'History' }"
-          @click="setActiveTab('History')"
-        >
-          History
-        </button>
-      </view>
+      <button
+        class="tab-button"
+        :class="{ active: activeTab === 'My Appointment' }"
+        @click="setActiveTab('My Appointment')"
+      >
+        My Appointment
+      </button>
+      <button
+        class="tab-button"
+        :class="{ active: activeTab === 'Consult Now' }"
+        @click="setActiveTab('Consult Now')"
+      >
+        Consult Now
+      </button>
+      <button
+        class="tab-button"
+        :class="{ active: activeTab === 'History' }"
+        @click="setActiveTab('History')"
+      >
+        History
+      </button>
+    </view>
 
     <!-- Appointment List -->
     <view class="appointment-list">
@@ -44,7 +44,12 @@
         class="appointment-card"
       >
         <view class="card-content">
-          <image :src="appointment.image" class="doctor-image" />
+          <view class="image-container">
+            <image :src="appointment.image" class="doctor-image" />
+            <view v-if="appointment.live === 'True'" class="live-badge">
+              LIVE
+            </view>
+          </view>
           <view class="appointment-info">
             <text class="doctor-name">{{ appointment.name }}</text>
             <text class="doctor-specialty">{{ appointment.specialty }}</text>
@@ -56,38 +61,51 @@
             </text>
           </view>
           <view class="appointment-actions">
-            <button class="consult-button">Consult Now</button>
+            <button class="consult-button" @click = "routechat">Consult Now</button>
           </view>
         </view>
         <!-- Reschedule and Cancel Buttons -->
-        <view
-          v-if="appointment.status !== 'HAPPEN NOW'"
-          class="extra-actions"
-        >
-			<button class="reschedule-action">Reschedule</button>
-			<view class="divider"></view>
-			<button class="cancel-action">Cancel</button>
+        <view v-if="appointment.status !== 'HAPPEN NOW'" class="extra-actions">
+          <button class="reschedule-action">
+            <image src="/static/Appointment/Reschedule.png" class="icon" />
+            <span class="button-text">Reschedule</span>
+          </button>
+          <view class="divider"></view>
+          <button class="cancel-action" @click="openCancelConfirmation(index)">
+            <image src="/static/Appointment/cancel.png" class="icon" />
+            <span class="button-text">Cancel</span>
+          </button>
         </view>
       </view>
     </view>
-	<view class="footer">
-	    <mybutton text="Book An Appointment" class="appointment-button" @click="handleNextClick" />
-	    <view class="icon-container">
-	      <image src="/static/vector.png" class="bell-icon" />
-	    </view>
-	  </view>
 
+    <!-- Confirmation Popup -->
+    <view v-if="showPopup" class="confirmation-popup">
+      <view class="popup-content">
+        <text class="popup-message">Are you sure you want to cancel the appointment?</text>
+        <view class="popup-actions">
+          <button class="popup-button no-button" @click="closePopup">No</button>
+          <button class="popup-button yes-button" @click="confirmCancel">Yes</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="footer">
+      <mybutton text="Book An Appointment" class="appointment-button" @click="handleNextClick" />
+      <view class="icon-container">
+        <image src="/static/vector.png" class="bell-icon" />
+      </view>
+    </view>
   </view>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import mybutton from "@/components/button/index.vue"
-
+import { ref, reactive } from "vue";
+import mybutton from "@/components/button/index.vue";
 
 const activeTab = ref("My Appointment");
 
-const appointments = [
+const appointments = reactive([
   {
     image: "/static/doctor2.png",
     name: "Dr. Richardson",
@@ -95,6 +113,7 @@ const appointments = [
     status: "HAPPEN NOW",
     date: "",
     time: "",
+    live: "True",
   },
   {
     image: "/static/doctor2.png",
@@ -104,10 +123,25 @@ const appointments = [
     date: "07/12/2024",
     time: "10:00 am",
   },
-];
+  {
+    image: "/static/doctor2.png",
+    name: "Dr. Richard Lee",
+    specialty: "Cardiologist",
+    status: "Upcoming",
+    date: "07/12/2024",
+    time: "10:00 am",
+  },
+  
+  
+]);
+
+const showPopup = ref(false);
+const selectedAppointmentIndex = ref(null);
 
 const goBack = () => {
-  console.log("Go Back to Previous Page");
+  uni.reLaunch({
+    url: "/pages/home/index",
+  });
 };
 
 const setActiveTab = (tab) => {
@@ -115,9 +149,33 @@ const setActiveTab = (tab) => {
 };
 
 const handleNextClick = () => {
+  uni.redirectTo({
+    url: "/pages/telemedicine/bookappointment",
+  });
+};
+
+const routechat = () => {
   uni.navigateTo({
-  	url: '/pages/telemedicine/Bookappointment'
-  })
+    url: "/pages/telemedicine/chat",
+  });
+};
+
+const openCancelConfirmation = (index) => {
+  selectedAppointmentIndex.value = index;
+  showPopup.value = true;
+};
+
+const confirmCancel = () => {
+  if (selectedAppointmentIndex.value !== null) {
+    appointments.splice(selectedAppointmentIndex.value, 1);
+    selectedAppointmentIndex.value = null;
+    showPopup.value = false;
+  }
+};
+
+const closePopup = () => {
+  selectedAppointmentIndex.value = null;
+  showPopup.value = false;
 };
 </script>
 
@@ -217,11 +275,34 @@ const handleNextClick = () => {
   padding: 30rpx; /* Padding only applies to the main card content */
 }
 
+.image-container {
+  position: relative; /* Make this the reference for the live badge */
+  display: inline-block;
+}
+
 .doctor-image {
   width: 100rpx;
   height: 100rpx;
-  border-radius: 5rpx;
+  border-radius: 10rpx; /* Optional rounded corners */
   margin-right: 20rpx;
+}
+
+.live-badge {
+  position: absolute;
+  bottom:  -10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: bold;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+uni-button:after {
+    content: none !important;
 }
 
 .appointment-info {
@@ -272,35 +353,42 @@ const handleNextClick = () => {
 .extra-actions {
   display: flex;
   justify-content: space-between;
-  padding: 10rpx 20rpx; /* Padding for the actions */
+  padding: 10rpx 20rpx;
   background-color: #f9f9f9;
-  border-radius: 0 0 10rpx 10rpx; /* Rounded corners only for the bottom */
-  border-top: 1rpx solid #e0e0e0; /* Add a subtle border between card and actions */
+  border-radius: 0 0 10rpx 10rpx;
+  border-top: 1rpx solid #e0e0e0;
 }
 
-uni-button:after {
-    content: none !important;
-}
-
-.reschedule-action,
-.cancel-action {
+button {
+  display: flex;
+  align-items: center; /* Vertically center icon and text */
+  justify-content: center; /* Horizontally center content */
+  gap: 10px; /* Space between icon and text */
+/*  background: none;
+  border: none; */
+  padding: 10rpx 20rpx;
   font-size: 22rpx;
-  align-items: center;
+  font-weight: bold;
   cursor: pointer;
-  width: 100%;
-  border: none; /* Remove border */
-  outline: none; /* Remove outline on focus */
-  text-align: center; /* Center align the text */
-  padding: 0; /* Optional: Remove padding for a cleaner look */
+  border-radius: 5rpx;
 }
 
 .reschedule-action {
   color: #0034ee;
-  
 }
 
 .cancel-action {
   color: #ff4d4d;
+}
+
+.icon {
+  width: 24rpx; /* Adjust size for better alignment */
+  height: 24rpx;
+}
+
+.button-text {
+  font-size: 22rpx;
+  color: inherit; /* Inherit text color from the button */
 }
 
 .divider {
@@ -335,5 +423,64 @@ uni-button:after {
   background-color: white; /* Circle background color */
   border-radius: 50%; /* Make it circular */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.confirmation-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px; /* Reduced the margin for better spacing */
+  display: block; /* Ensure the element behaves like a block to apply margins properly */
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.popup-button {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.no-button {
+  background-color: #0034ee;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yes-button {
+  background-color: #ffe5e5;
+  color: #ff4d4d;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 </style>

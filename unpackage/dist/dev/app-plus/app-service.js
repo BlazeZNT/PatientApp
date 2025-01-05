@@ -32,7 +32,7 @@ if (uni.restoreGlobal) {
 (function(vue) {
   "use strict";
   const _imports_0$4 = "/static/backgroundimage.png";
-  const _imports_1$2 = "/static/Google Icon.png";
+  const _imports_1$5 = "/static/Google Icon.png";
   const _imports_2$1 = "/static/Apple Icon.png";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
@@ -41,7 +41,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$8 = {
+  const _sfc_main$e = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -55,7 +55,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createElementVNode("image", {
         class: "background",
@@ -71,7 +71,7 @@ if (uni.restoreGlobal) {
           }, [
             vue.createElementVNode("image", {
               class: "icon",
-              src: _imports_1$2
+              src: _imports_1$5
             }),
             vue.createElementVNode("text", { class: "button-text" }, "Login with Google")
           ]),
@@ -89,10 +89,10 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-d08ef7d4"], ["__file", "C:/Job/PatientApp/pages/login/index.vue"]]);
+  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-d08ef7d4"], ["__file", "C:/Job/PatientApp/pages/login/index.vue"]]);
   const _imports_0$3 = "/static/arrow-left.png";
-  const _imports_1$1 = "/static/logo.png";
-  const _sfc_main$7 = {
+  const _imports_1$4 = "/static/logo.png";
+  const _sfc_main$d = {
     __name: "login",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -161,7 +161,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" Header Section "),
       vue.createElementVNode("view", { class: "header" }, [
@@ -173,7 +173,7 @@ if (uni.restoreGlobal) {
           }),
           vue.createElementVNode("image", {
             class: "logo",
-            src: _imports_1$1
+            src: _imports_1$4
           })
         ]),
         vue.createElementVNode("view", { class: "text-container" }, [
@@ -324,7 +324,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-e4e4508d"], ["__file", "C:/Job/PatientApp/pages/login/login.vue"]]);
+  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-e4e4508d"], ["__file", "C:/Job/PatientApp/pages/login/login.vue"]]);
   /*! *****************************************************************************
   	Copyright (c) Microsoft Corporation.
   
@@ -74494,7 +74494,7 @@ if (uni.restoreGlobal) {
     zrUtil: util$1,
     zrender
   }, Symbol.toStringTag, { value: "Module" }));
-  const _sfc_main$6 = {
+  const _sfc_main$c = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -74508,7 +74508,7 @@ if (uni.restoreGlobal) {
       ];
       const navigateTo = (item) => {
         activeTab.value = item.name;
-        uni.navigateTo({
+        uni.redirectTo({
           url: item.route
         });
       };
@@ -74517,7 +74517,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "navigation" }, [
       (vue.openBlock(), vue.createElementBlock(
         vue.Fragment,
@@ -74543,9 +74543,9 @@ if (uni.restoreGlobal) {
       ))
     ]);
   }
-  const NavigationComponent = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-b1827831"], ["__file", "C:/Job/PatientApp/components/navigation/index.vue"]]);
+  const NavigationComponent = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-b1827831"], ["__file", "C:/Job/PatientApp/components/navigation/index.vue"]]);
   const _imports_0$2 = "/static/graph.png";
-  const _sfc_main$5 = {
+  const _sfc_main$b = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -74599,7 +74599,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("scroll-view", {
       class: "scroll-container",
       "scroll-y": "true"
@@ -74721,8 +74721,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesHomeIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-4978fed5"], ["__file", "C:/Job/PatientApp/pages/home/index.vue"]]);
-  const _sfc_main$4 = {
+  const PagesHomeIndex = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-4978fed5"], ["__file", "C:/Job/PatientApp/pages/home/index.vue"]]);
+  const _sfc_main$a = {
     __name: "index",
     props: {
       text: {
@@ -74743,7 +74743,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "button",
       {
@@ -74755,9 +74755,9 @@ if (uni.restoreGlobal) {
       /* TEXT */
     );
   }
-  const mybutton = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-fdcc9251"], ["__file", "C:/Job/PatientApp/components/button/index.vue"]]);
+  const mybutton = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-fdcc9251"], ["__file", "C:/Job/PatientApp/components/button/index.vue"]]);
   const _imports_0$1 = "/static/success-icon.png";
-  const _sfc_main$3 = {
+  const _sfc_main$9 = {
     __name: "logincompile",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -74798,7 +74798,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" Success Icon "),
       vue.createCommentVNode(" Success Message "),
@@ -74858,23 +74858,33 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesLoginLogincompile = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-04ced37b"], ["__file", "C:/Job/PatientApp/pages/login/logincompile.vue"]]);
-  const _imports_0 = "/static/back-arrow.png";
-  const _imports_1 = "/static/bell.png";
-  const _imports_2 = "/static/vector.png";
-  const _sfc_main$2 = {
+  const PagesLoginLogincompile = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-04ced37b"], ["__file", "C:/Job/PatientApp/pages/login/logincompile.vue"]]);
+  const _imports_1$3 = "/static/bell.png";
+  const _imports_2 = "/static/Appointment/Reschedule.png";
+  const _imports_3$2 = "/static/Appointment/cancel.png";
+  const _imports_4$1 = "/static/vector.png";
+  const _sfc_main$8 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
       const activeTab = vue.ref("My Appointment");
-      const appointments = [
+      const appointments = vue.reactive([
         {
           image: "/static/doctor2.png",
           name: "Dr. Richardson",
           specialty: "Immunologist",
           status: "HAPPEN NOW",
           date: "",
-          time: ""
+          time: "",
+          live: "True"
+        },
+        {
+          image: "/static/doctor2.png",
+          name: "Dr. Richard Lee",
+          specialty: "Cardiologist",
+          status: "Upcoming",
+          date: "07/12/2024",
+          time: "10:00 am"
         },
         {
           image: "/static/doctor2.png",
@@ -74884,30 +74894,54 @@ if (uni.restoreGlobal) {
           date: "07/12/2024",
           time: "10:00 am"
         }
-      ];
+      ]);
+      const showPopup = vue.ref(false);
+      const selectedAppointmentIndex = vue.ref(null);
       const goBack = () => {
-        formatAppLog("log", "at pages/telemedicine/index.vue:110", "Go Back to Previous Page");
+        uni.reLaunch({
+          url: "/pages/home/index"
+        });
       };
       const setActiveTab = (tab) => {
         activeTab.value = tab;
       };
       const handleNextClick = () => {
-        uni.navigateTo({
-          url: "/pages/telemedicine/Bookappointment"
+        uni.redirectTo({
+          url: "/pages/telemedicine/bookappointment"
         });
       };
-      const __returned__ = { activeTab, appointments, goBack, setActiveTab, handleNextClick, ref: vue.ref, mybutton };
+      const routechat = () => {
+        uni.navigateTo({
+          url: "/pages/telemedicine/chat"
+        });
+      };
+      const openCancelConfirmation = (index) => {
+        selectedAppointmentIndex.value = index;
+        showPopup.value = true;
+      };
+      const confirmCancel = () => {
+        if (selectedAppointmentIndex.value !== null) {
+          appointments.splice(selectedAppointmentIndex.value, 1);
+          selectedAppointmentIndex.value = null;
+          showPopup.value = false;
+        }
+      };
+      const closePopup = () => {
+        selectedAppointmentIndex.value = null;
+        showPopup.value = false;
+      };
+      const __returned__ = { activeTab, appointments, showPopup, selectedAppointmentIndex, goBack, setActiveTab, handleNextClick, routechat, openCancelConfirmation, confirmCancel, closePopup, ref: vue.ref, reactive: vue.reactive, mybutton };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "appointment-page" }, [
       vue.createCommentVNode(" Header Section "),
       vue.createElementVNode("view", { class: "header" }, [
         vue.createElementVNode("view", { class: "header-left" }, [
           vue.createElementVNode("image", {
-            src: _imports_0,
+            src: _imports_0$3,
             class: "back-arrow",
             onClick: $setup.goBack
           })
@@ -74915,7 +74949,7 @@ if (uni.restoreGlobal) {
         vue.createElementVNode("text", { class: "title" }, "Appointment"),
         vue.createElementVNode("view", { class: "header-right" }, [
           vue.createElementVNode("image", {
-            src: _imports_1,
+            src: _imports_1$3,
             class: "bell-icon"
           })
         ])
@@ -74955,19 +74989,25 @@ if (uni.restoreGlobal) {
       ]),
       vue.createCommentVNode(" Appointment List "),
       vue.createElementVNode("view", { class: "appointment-list" }, [
-        (vue.openBlock(), vue.createElementBlock(
+        (vue.openBlock(true), vue.createElementBlock(
           vue.Fragment,
           null,
           vue.renderList($setup.appointments, (appointment, index) => {
-            return vue.createElementVNode("view", {
+            return vue.openBlock(), vue.createElementBlock("view", {
               key: index,
               class: "appointment-card"
             }, [
               vue.createElementVNode("view", { class: "card-content" }, [
-                vue.createElementVNode("image", {
-                  src: appointment.image,
-                  class: "doctor-image"
-                }, null, 8, ["src"]),
+                vue.createElementVNode("view", { class: "image-container" }, [
+                  vue.createElementVNode("image", {
+                    src: appointment.image,
+                    class: "doctor-image"
+                  }, null, 8, ["src"]),
+                  appointment.live === "True" ? (vue.openBlock(), vue.createElementBlock("view", {
+                    key: 0,
+                    class: "live-badge"
+                  }, " LIVE ")) : vue.createCommentVNode("v-if", true)
+                ]),
                 vue.createElementVNode("view", { class: "appointment-info" }, [
                   vue.createElementVNode(
                     "text",
@@ -74998,7 +75038,10 @@ if (uni.restoreGlobal) {
                   ))
                 ]),
                 vue.createElementVNode("view", { class: "appointment-actions" }, [
-                  vue.createElementVNode("button", { class: "consult-button" }, "Consult Now")
+                  vue.createElementVNode("button", {
+                    class: "consult-button",
+                    onClick: $setup.routechat
+                  }, "Consult Now")
                 ])
               ]),
               vue.createCommentVNode(" Reschedule and Cancel Buttons "),
@@ -75006,16 +75049,50 @@ if (uni.restoreGlobal) {
                 key: 0,
                 class: "extra-actions"
               }, [
-                vue.createElementVNode("button", { class: "reschedule-action" }, "Reschedule"),
+                vue.createElementVNode("button", { class: "reschedule-action" }, [
+                  vue.createElementVNode("image", {
+                    src: _imports_2,
+                    class: "icon"
+                  }),
+                  vue.createElementVNode("span", { class: "button-text" }, "Reschedule")
+                ]),
                 vue.createElementVNode("view", { class: "divider" }),
-                vue.createElementVNode("button", { class: "cancel-action" }, "Cancel")
+                vue.createElementVNode("button", {
+                  class: "cancel-action",
+                  onClick: ($event) => $setup.openCancelConfirmation(index)
+                }, [
+                  vue.createElementVNode("image", {
+                    src: _imports_3$2,
+                    class: "icon"
+                  }),
+                  vue.createElementVNode("span", { class: "button-text" }, "Cancel")
+                ], 8, ["onClick"])
               ])) : vue.createCommentVNode("v-if", true)
             ]);
           }),
-          64
-          /* STABLE_FRAGMENT */
+          128
+          /* KEYED_FRAGMENT */
         ))
       ]),
+      vue.createCommentVNode(" Confirmation Popup "),
+      $setup.showPopup ? (vue.openBlock(), vue.createElementBlock("view", {
+        key: 0,
+        class: "confirmation-popup"
+      }, [
+        vue.createElementVNode("view", { class: "popup-content" }, [
+          vue.createElementVNode("text", { class: "popup-message" }, "Are you sure you want to cancel the appointment?"),
+          vue.createElementVNode("view", { class: "popup-actions" }, [
+            vue.createElementVNode("button", {
+              class: "popup-button no-button",
+              onClick: $setup.closePopup
+            }, "No"),
+            vue.createElementVNode("button", {
+              class: "popup-button yes-button",
+              onClick: $setup.confirmCancel
+            }, "Yes")
+          ])
+        ])
+      ])) : vue.createCommentVNode("v-if", true),
       vue.createElementVNode("view", { class: "footer" }, [
         vue.createVNode($setup["mybutton"], {
           text: "Book An Appointment",
@@ -75024,20 +75101,734 @@ if (uni.restoreGlobal) {
         }),
         vue.createElementVNode("view", { class: "icon-container" }, [
           vue.createElementVNode("image", {
-            src: _imports_2,
+            src: _imports_4$1,
             class: "bell-icon"
           })
         ])
       ])
     ]);
   }
-  const PagesTelemedicineIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-43fc5358"], ["__file", "C:/Job/PatientApp/pages/telemedicine/index.vue"]]);
+  const PagesTelemedicineIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-43fc5358"], ["__file", "C:/Job/PatientApp/pages/telemedicine/index.vue"]]);
+  const _imports_0 = "/static/Appointment/patient.png";
+  const _imports_1$2 = "/static/call-end.png";
+  const _sfc_main$7 = {
+    __name: "video",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const endCall = () => {
+        formatAppLog("log", "at pages/telemedicine/video.vue:34", "Call ended");
+      };
+      const __returned__ = { endCall, ref: vue.ref };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "video-call-container" }, [
+      vue.createCommentVNode(" Call Timer "),
+      vue.createElementVNode("view", { class: "call-timer" }, [
+        vue.createElementVNode("view", { class: "dot" }),
+        vue.createElementVNode("text", { class: "timer-text" }, "06:11")
+      ]),
+      vue.createCommentVNode(" Mini User Video "),
+      vue.createElementVNode("view", { class: "user-video-container" }, [
+        vue.createElementVNode("image", {
+          src: _imports_0,
+          class: "user-video",
+          alt: "User's Video"
+        })
+      ]),
+      vue.createCommentVNode(" Doctor Information "),
+      vue.createElementVNode("view", { class: "doctor-info" }, [
+        vue.createElementVNode("text", { class: "doctor-name" }, "Dr. Richardson"),
+        vue.createElementVNode("text", { class: "doctor-specialty" }, "Immunologist")
+      ]),
+      vue.createCommentVNode(" End Call Button "),
+      vue.createElementVNode("view", { class: "end-call-container" }, [
+        vue.createElementVNode("button", {
+          class: "end-call-button",
+          onClick: $setup.endCall
+        }, [
+          vue.createElementVNode("image", {
+            src: _imports_1$2,
+            alt: "End Call",
+            class: "end-call-icon"
+          })
+        ])
+      ])
+    ]);
+  }
+  const PagesTelemedicineVideo = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-11b6e89f"], ["__file", "C:/Job/PatientApp/pages/telemedicine/video.vue"]]);
+  const _sfc_main$6 = {
+    __name: "patientdetails",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const formData = vue.reactive({
+        name: "",
+        birthDateAge: "",
+        email: "",
+        phoneNumber: "",
+        address: "",
+        weight: 65,
+        height: 175
+      });
+      const goBack = () => {
+        uni.redirectTo({
+          url: "/pages/telemedicine/index"
+        });
+      };
+      const handleNextClick = () => {
+        uni.navigateTo({
+          url: "/pages/telemedicine/doctordetails"
+        });
+      };
+      const __returned__ = { formData, goBack, handleNextClick, reactive: vue.reactive, mybutton };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("view", { class: "header" }, [
+        vue.createElementVNode("view", { class: "header-left" }, [
+          vue.createElementVNode("image", {
+            src: _imports_0$3,
+            class: "back-arrow",
+            onClick: $setup.goBack
+          })
+        ]),
+        vue.createElementVNode("text", { class: "title" }, "Appointment"),
+        vue.createElementVNode("view", { class: "header-right" }, [
+          vue.createElementVNode("image", {
+            src: _imports_1$3,
+            class: "bell-icon"
+          })
+        ])
+      ]),
+      vue.createElementVNode("view", { class: "form-page" }, [
+        vue.createCommentVNode(" Name "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Name"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "text",
+              class: "input",
+              placeholder: "Enter your name",
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.formData.name = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.name]
+          ])
+        ]),
+        vue.createCommentVNode(" Birth Date / Age "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Birth Date / Age"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "text",
+              class: "input",
+              placeholder: "Enter your birth date and age",
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.formData.birthDateAge = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.birthDateAge]
+          ])
+        ]),
+        vue.createCommentVNode(" Email "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Email"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "email",
+              class: "input",
+              placeholder: "Enter your email",
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $setup.formData.email = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.email]
+          ])
+        ]),
+        vue.createCommentVNode(" Phone Number "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Phone Number"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "text",
+              class: "input",
+              placeholder: "Enter your phone number",
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.phoneNumber = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.phoneNumber]
+          ])
+        ]),
+        vue.createCommentVNode(" Address "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Address"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "text",
+              class: "input",
+              placeholder: "Enter your address",
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $setup.formData.address = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.address]
+          ])
+        ]),
+        vue.createElementVNode("h2", null, "Patient Info"),
+        vue.createCommentVNode(" Patient Info "),
+        vue.createElementVNode("view", { class: "patient-info" }, [
+          vue.createCommentVNode(" Weight Card "),
+          vue.createElementVNode("view", { class: "info-card" }, [
+            vue.createElementVNode("text", { class: "info-label" }, "Weight"),
+            vue.createElementVNode("view", { class: "info-value" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "value" },
+                vue.toDisplayString($setup.formData.weight),
+                1
+                /* TEXT */
+              ),
+              vue.createElementVNode("text", { class: "unit" }, "kg")
+            ])
+          ]),
+          vue.createCommentVNode(" Height Card "),
+          vue.createElementVNode("view", { class: "info-card" }, [
+            vue.createElementVNode("text", { class: "info-label" }, "Height"),
+            vue.createElementVNode("view", { class: "info-value" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "value" },
+                vue.toDisplayString($setup.formData.height),
+                1
+                /* TEXT */
+              ),
+              vue.createElementVNode("text", { class: "unit" }, "cm")
+            ])
+          ])
+        ]),
+        vue.createElementVNode("view", { class: "footer" }, [
+          vue.createVNode($setup["mybutton"], {
+            text: "Book An Appointment",
+            class: "appointment-button",
+            onClick: $setup.handleNextClick
+          })
+        ])
+      ])
+    ]);
+  }
+  const PagesTelemedicinePatientdetails = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-17e96df3"], ["__file", "C:/Job/PatientApp/pages/telemedicine/patientdetails.vue"]]);
+  const _imports_1$1 = "/static/doctor2.png";
+  const _imports_1 = "/static/video.png";
+  const _imports_3$1 = "/static/appointment/heartbeat.png";
+  const _imports_3 = "/static/appointment/medicine2.png";
+  const _imports_4 = "/static/appointment/medicine1.png";
+  const _imports_5 = "/static/Appointment/Doc.png";
+  const _imports_6 = "/static/Appointment/sendbutton.png";
+  const _sfc_main$5 = {
+    __name: "chat",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const handleNextClick = () => {
+        uni.redirectTo({
+          url: "/pages/telemedicine/video"
+        });
+      };
+      const __returned__ = { handleNextClick };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("view", { class: "consultation-page" }, [
+        vue.createCommentVNode(" Header "),
+        vue.createElementVNode("view", { class: "header" }, [
+          vue.createElementVNode("view", { class: "doctor-info" }, [
+            vue.createElementVNode("view", { class: "doctor-image-container" }, [
+              vue.createElementVNode("image", {
+                src: _imports_1$1,
+                class: "doctor-image"
+              }),
+              vue.createElementVNode("view", { class: "green-dot" })
+            ]),
+            vue.createElementVNode("view", { class: "docstuff" }, [
+              vue.createElementVNode("text", { class: "doctor-name" }, "Dr. Richardson"),
+              vue.createElementVNode("text", { class: "doctor-specialty" }, "Immunologist")
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "header-button" }, [
+            vue.createElementVNode("button", {
+              class: "video",
+              onClick: $setup.handleNextClick
+            }, [
+              vue.createElementVNode("image", {
+                src: _imports_1,
+                alt: "Video Icon",
+                class: "button-icon"
+              })
+            ]),
+            vue.createElementVNode("button", { class: "finish-button" }, "Finish")
+          ])
+        ]),
+        vue.createCommentVNode(" Chat Section "),
+        vue.createElementVNode("view", { class: "chat-section" }, [
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "Good morning, I am Dr. Richardson"),
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "Can I help you?"),
+          vue.createElementVNode("view", { class: "chat-bubble user-bubble" }, "Hi doctor"),
+          vue.createElementVNode("view", { class: "chat-bubble user-bubble" }, "My chest feels very hurt"),
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "Oh got it. "),
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "Can you share your heart rate?"),
+          vue.createCommentVNode(" Heart Rate Card "),
+          vue.createElementVNode("view", { class: "record-card user-bubble" }, [
+            vue.createElementVNode("view", { class: "heartcard" }, [
+              vue.createElementVNode("text", { class: "record-label" }, "Heart Rate"),
+              vue.createElementVNode("image", {
+                src: _imports_3$1,
+                alt: "heart",
+                class: "icon"
+              })
+            ]),
+            vue.createElementVNode("text", { class: "record-value" }, [
+              vue.createTextVNode("120 "),
+              vue.createElementVNode("text", { class: "unit" }, "bpm")
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "It looks great, seems like you just feel tired."),
+          vue.createElementVNode("view", { class: "chat-bubble doctor-bubble" }, "I will create some prescription for you."),
+          vue.createCommentVNode(" Prescription Card "),
+          vue.createElementVNode("view", { class: "prescription-card" }, [
+            vue.createElementVNode("text", { class: "card-title" }, "Mr. Brian’s Prescription"),
+            vue.createElementVNode("view", { class: "medicine-box" }, [
+              vue.createElementVNode("image", {
+                src: _imports_3,
+                alt: "heart",
+                class: "icon"
+              }),
+              vue.createElementVNode("view", { class: "prescription-item" }, "Antacids")
+            ]),
+            vue.createElementVNode("view", { class: "medicine-box" }, [
+              vue.createElementVNode("image", {
+                src: _imports_4,
+                alt: "heart",
+                class: "icon"
+              }),
+              vue.createElementVNode("view", { class: "prescription-item" }, "Simethicone")
+            ]),
+            vue.createElementVNode("button", { class: "get-medicine-button" }, "Get Medicine")
+          ])
+        ]),
+        vue.createCommentVNode(" Input Section "),
+        vue.createElementVNode("view", { class: "input-section" }, [
+          vue.createElementVNode("image", {
+            src: _imports_5,
+            class: "home-icon"
+          }),
+          vue.createElementVNode("input", {
+            type: "text",
+            placeholder: "Type a message",
+            class: "chat-input"
+          }),
+          vue.createElementVNode("image", {
+            src: _imports_6,
+            class: "send-icon"
+          })
+        ])
+      ])
+    ]);
+  }
+  const PagesTelemedicineChat = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-aea21ffd"], ["__file", "C:/Job/PatientApp/pages/telemedicine/chat.vue"]]);
+  const _sfc_main$4 = {
+    __name: "index",
+    emits: ["update-date"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const emit = __emit;
+      const today = /* @__PURE__ */ new Date();
+      const selectedDate = vue.ref(null);
+      const currentDate = vue.ref(/* @__PURE__ */ new Date());
+      const weekdays = ["S", "M", "T", "W", "T", "F", "S"];
+      const isCurrentMonth = vue.computed(() => {
+        return currentDate.value.getFullYear() === today.getFullYear() && currentDate.value.getMonth() === today.getMonth();
+      });
+      const monthAndDate = vue.computed(() => {
+        const date = selectedDate.value ? new Date(selectedDate.value) : currentDate.value;
+        const adjustedDate = new Date(date);
+        adjustedDate.setDate(adjustedDate.getDate() + 1);
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ];
+        const month = monthNames[adjustedDate.getMonth()];
+        adjustedDate.getDate();
+        const year = adjustedDate.getFullYear();
+        return `${month} ${year} `;
+      });
+      const dates = vue.computed(() => {
+        const year = currentDate.value.getFullYear();
+        const month = currentDate.value.getMonth();
+        const firstDayOfMonth = new Date(year, month, 1).getDay();
+        const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+        const days = [];
+        for (let i2 = 0; i2 < firstDayOfMonth; i2++) {
+          days.push({ day: "", fullDate: null });
+        }
+        for (let day = 1; day <= lastDateOfMonth; day++) {
+          const fullDate = new Date(year, month, day).toISOString().split("T")[0];
+          days.push({ day, fullDate });
+        }
+        return days;
+      });
+      const prevMonth = () => {
+        currentDate.value = new Date(
+          currentDate.value.getFullYear(),
+          currentDate.value.getMonth() - 1
+        );
+        updateCalendar();
+      };
+      const nextMonth = () => {
+        currentDate.value = new Date(
+          currentDate.value.getFullYear(),
+          currentDate.value.getMonth() + 1
+        );
+        updateCalendar();
+      };
+      const updateCalendar = () => {
+        if (selectedDate.value) {
+          const selected = new Date(selectedDate.value);
+          if (selected.getMonth() !== currentDate.value.getMonth()) {
+            selectedDate.value = null;
+          }
+        }
+      };
+      const selectDate = (date) => {
+        if (date.fullDate) {
+          selectedDate.value = date.fullDate;
+          emit("update-date", monthAndDate.value);
+        }
+      };
+      const isSelected = (date) => date.fullDate === selectedDate.value;
+      const isToday = (date) => date.fullDate === today.toISOString().split("T")[0];
+      const isPastDate = (date) => date.fullDate && new Date(date.fullDate) < today;
+      const __returned__ = { emit, today, selectedDate, currentDate, weekdays, isCurrentMonth, monthAndDate, dates, prevMonth, nextMonth, updateCalendar, selectDate, isSelected, isToday, isPastDate, ref: vue.ref, computed: vue.computed };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "calendar-container" }, [
+      vue.createCommentVNode(" Calendar Header "),
+      vue.createElementVNode("view", { class: "calendar-header" }, [
+        !$setup.isCurrentMonth ? (vue.openBlock(), vue.createElementBlock("button", {
+          key: 0,
+          onClick: $setup.prevMonth,
+          class: "nav-button"
+        }, "<")) : vue.createCommentVNode("v-if", true),
+        vue.createElementVNode(
+          "view",
+          { class: "month-date" },
+          vue.toDisplayString($setup.monthAndDate),
+          1
+          /* TEXT */
+        ),
+        vue.createElementVNode("button", {
+          onClick: $setup.nextMonth,
+          class: "nav-button"
+        }, ">")
+      ]),
+      vue.createCommentVNode(" Weekday Labels "),
+      vue.createElementVNode("view", { class: "calendar-weekdays" }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList($setup.weekdays, (day) => {
+            return vue.createElementVNode(
+              "view",
+              {
+                key: day,
+                class: "weekday"
+              },
+              vue.toDisplayString(day),
+              1
+              /* TEXT */
+            );
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ]),
+      vue.createCommentVNode(" Calendar Dates "),
+      vue.createElementVNode("view", { class: "calendar-dates" }, [
+        (vue.openBlock(true), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList($setup.dates, (date, index) => {
+            return vue.openBlock(), vue.createElementBlock("view", {
+              key: index,
+              class: vue.normalizeClass(["date", { selected: $setup.isSelected(date), today: $setup.isToday(date), past: $setup.isPastDate(date), "empty-slot": !date.day }]),
+              onClick: ($event) => $setup.selectDate(date)
+            }, vue.toDisplayString(date.day), 11, ["onClick"]);
+          }),
+          128
+          /* KEYED_FRAGMENT */
+        ))
+      ])
+    ]);
+  }
+  const customcal = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-1e252fb2"], ["__file", "C:/Job/PatientApp/components/customCalendar/index.vue"]]);
+  const _sfc_main$3 = {
+    __name: "doctordetails",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const formData = vue.reactive({
+        complaints: ""
+      });
+      const days = [7, 14, 21, 28];
+      const timeSlots = ["08:00", "10:00", "14:00", "16:00"];
+      const selectedDay = vue.reactive({ value: 7 });
+      const selectedTime = vue.ref("08:00");
+      const selectDay = (day) => {
+        selectedDay.value = day;
+      };
+      const selectTime = (time2) => {
+        formatAppLog("log", "at pages/telemedicine/doctordetails.vue:104", "hello");
+        selectedTime.value = time2;
+      };
+      const handleNextClick = () => {
+        uni.navigateTo({
+          url: "/pages/telemedicine/completeAppointment"
+        });
+      };
+      const __returned__ = { formData, days, timeSlots, selectedDay, selectedTime, selectDay, selectTime, handleNextClick, reactive: vue.reactive, ref: vue.ref, mybutton, customcal };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("view", { class: "header" }, [
+        vue.createElementVNode("view", { class: "header-left" }, [
+          vue.createElementVNode("image", {
+            src: _imports_0$3,
+            class: "back-arrow",
+            onClick: _cache[0] || (_cache[0] = (...args) => _ctx.goBack && _ctx.goBack(...args))
+          })
+        ]),
+        vue.createElementVNode("text", { class: "title" }, "Doctor Details"),
+        vue.createElementVNode("view", { class: "header-right" }, [
+          vue.createElementVNode("image", {
+            src: _imports_1$3,
+            class: "bell-icon"
+          })
+        ])
+      ]),
+      vue.createElementVNode("view", { class: "containerbox" }, [
+        vue.createCommentVNode(" Doctor Info Section "),
+        vue.createElementVNode("view", { class: "doctor-info" }, [
+          vue.createElementVNode("image", {
+            src: _imports_1$1,
+            class: "doctor-image"
+          }),
+          vue.createElementVNode("text", { class: "live-badge" }, "LIVE"),
+          vue.createElementVNode("text", { class: "doctor-name" }, "Dr. Richardson"),
+          vue.createElementVNode("view", { class: "doctor-rating" }, [
+            vue.createElementVNode("text", { class: "doctor-specialty" }, "Immunologist"),
+            vue.createElementVNode("text", { class: "rating" }, "★ 4.5")
+          ])
+        ]),
+        vue.createCommentVNode(" Health Complaints Section "),
+        vue.createElementVNode("view", { class: "form-group" }, [
+          vue.createElementVNode("text", { class: "label" }, "Tell your health complaints"),
+          vue.withDirectives(vue.createElementVNode(
+            "textarea",
+            {
+              class: "textarea",
+              placeholder: "Describe your health complaints...",
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.formData.complaints = $event)
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.complaints]
+          ])
+        ]),
+        vue.createElementVNode("view", { class: "medical-record" }, [
+          vue.createCommentVNode(" Heart Rate Card "),
+          vue.createElementVNode("view", { class: "record-card" }, [
+            vue.createElementVNode("view", { class: "heartcard" }, [
+              vue.createElementVNode("text", { class: "record-label" }, "Heart Rate"),
+              vue.createElementVNode("image", {
+                src: _imports_3$1,
+                alt: "heart",
+                class: "icon"
+              })
+            ]),
+            vue.createElementVNode("text", { class: "record-value" }, [
+              vue.createTextVNode("120 "),
+              vue.createElementVNode("text", { class: "unit" }, "bpm")
+            ])
+          ]),
+          vue.createCommentVNode(" Add Others Card "),
+          vue.createElementVNode("view", { class: "add-card" }, [
+            vue.createElementVNode("image", {
+              src: _imports_3$1,
+              alt: "add",
+              class: "add-icon"
+            }),
+            vue.createElementVNode("text", { class: "add-label" }, "Add others")
+          ])
+        ]),
+        vue.createCommentVNode(" Select Date Section "),
+        vue.createElementVNode("view", { class: "select-date" }, [
+          vue.createElementVNode("text", { class: "label" }, "Select Date"),
+          vue.createElementVNode("view", { class: "calendar" }, [
+            vue.createCommentVNode(" Calendar grid will be added here "),
+            vue.createVNode($setup["customcal"])
+          ])
+        ]),
+        vue.createCommentVNode(" Select Time Section "),
+        vue.createElementVNode("view", { class: "select-time" }, [
+          vue.createElementVNode("text", { class: "label" }, "Select Time"),
+          vue.createElementVNode("view", { class: "time-slots" }, [
+            (vue.openBlock(), vue.createElementBlock(
+              vue.Fragment,
+              null,
+              vue.renderList($setup.timeSlots, (time2, index) => {
+                return vue.createElementVNode("button", {
+                  key: index,
+                  class: vue.normalizeClass(["time-slot", { selected: time2 === $setup.selectedTime }]),
+                  onClick: ($event) => $setup.selectTime(time2)
+                }, vue.toDisplayString(time2), 11, ["onClick"]);
+              }),
+              64
+              /* STABLE_FRAGMENT */
+            ))
+          ])
+        ])
+      ]),
+      vue.createElementVNode("view", { class: "footer" }, [
+        vue.createVNode($setup["mybutton"], {
+          text: "Book An Appointment",
+          class: "appointment-button",
+          onClick: $setup.handleNextClick
+        })
+      ])
+    ]);
+  }
+  const PagesTelemedicineDoctordetails = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-f9d86d68"], ["__file", "C:/Job/PatientApp/pages/telemedicine/doctordetails.vue"]]);
+  const _sfc_main$2 = {
+    __name: "completeAppointment",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const redirectToPage = () => {
+        formatAppLog("log", "at pages/telemedicine/completeAppointment.vue:45", "Redirecting...");
+        uni.reLaunch({
+          url: "/pages/telemedicine/index"
+        });
+      };
+      const __returned__ = { redirectToPage, ref: vue.ref };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("view", { class: "confirmation-page" }, [
+        vue.createCommentVNode(" Main Card "),
+        vue.createElementVNode("view", { class: "confirmation-card" }, [
+          vue.createCommentVNode(" Success Icon "),
+          vue.createElementVNode("view", { class: "success-icon" }, [
+            vue.createElementVNode("image", {
+              src: _imports_0$1,
+              class: "checkmark"
+            })
+          ]),
+          vue.createCommentVNode(" Confirmation Text "),
+          vue.createElementVNode("text", { class: "confirmation-text" }, "Your appointment has been made!"),
+          vue.createCommentVNode(" Doctor Info "),
+          vue.createElementVNode("view", { class: "doctor-info" }, [
+            vue.createElementVNode("image", {
+              src: _imports_1$1,
+              class: "doctor-image"
+            }),
+            vue.createElementVNode("view", { class: "doctor-details" }, [
+              vue.createElementVNode("text", { class: "doctor-name" }, "Dr. Richardson"),
+              vue.createElementVNode("text", { class: "doctor-specialty" }, "Immunologist")
+            ])
+          ]),
+          vue.createCommentVNode(" Appointment Details "),
+          vue.createElementVNode("view", { class: "appointment-details" }, [
+            vue.createElementVNode("view", { class: "detail" }, [
+              vue.createElementVNode("text", { class: "label" }, "Date"),
+              vue.createElementVNode("text", { class: "value" }, "7/12/2024")
+            ]),
+            vue.createElementVNode("view", { class: "detail" }, [
+              vue.createElementVNode("text", { class: "label" }, "Time"),
+              vue.createElementVNode("text", { class: "value" }, "08:00 am")
+            ])
+          ]),
+          vue.createElementVNode("button", { onClick: $setup.redirectToPage }, "Confirm")
+        ])
+      ])
+    ]);
+  }
+  const PagesTelemedicineCompleteAppointment = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "C:/Job/PatientApp/pages/telemedicine/completeAppointment.vue"]]);
   const _sfc_main$1 = {
-    __name: "Bookappointment",
+    __name: "bookappointment",
     setup(__props, { expose: __expose }) {
       __expose();
       const activeTab = vue.ref("My Appointment");
       const appointments = [
+        {
+          image: "/static/doctor2.png",
+          name: "Dr. Richardson",
+          specialty: "Immunologist",
+          status: "HAPPEN NOW",
+          date: "",
+          time: "",
+          live: "True"
+        },
+        {
+          image: "/static/doctor2.png",
+          name: "Dr. Richard Lee",
+          specialty: "Cardiologist",
+          status: "Upcoming",
+          date: "07/12/2024",
+          time: "10:00 am",
+          live: "True"
+        },
         {
           image: "/static/doctor2.png",
           name: "Dr. Richardson",
@@ -75052,16 +75843,25 @@ if (uni.restoreGlobal) {
           specialty: "Cardiologist",
           status: "Upcoming",
           date: "07/12/2024",
-          time: "10:00 am"
+          time: "10:00 am",
+          live: "True"
         }
       ];
       const goBack = () => {
-        formatAppLog("log", "at pages/telemedicine/Bookappointment.vue:109", "Go Back to Previous Page");
+        uni.reLaunch({
+          url: "/pages/telemedicine/index"
+        });
+      };
+      const bookappointment = () => {
+        formatAppLog("log", "at pages/telemedicine/bookappointment.vue:104", "clicked");
+        uni.navigateTo({
+          url: "/pages/telemedicine/patientdetails"
+        });
       };
       const setActiveTab = (tab) => {
         activeTab.value = tab;
       };
-      const __returned__ = { activeTab, appointments, goBack, setActiveTab, ref: vue.ref, mybutton };
+      const __returned__ = { activeTab, appointments, goBack, bookappointment, setActiveTab, ref: vue.ref, mybutton };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -75072,7 +75872,7 @@ if (uni.restoreGlobal) {
       vue.createElementVNode("view", { class: "header" }, [
         vue.createElementVNode("view", { class: "header-left" }, [
           vue.createElementVNode("image", {
-            src: _imports_0,
+            src: _imports_0$3,
             class: "back-arrow",
             onClick: $setup.goBack
           })
@@ -75080,46 +75880,17 @@ if (uni.restoreGlobal) {
         vue.createElementVNode("text", { class: "title" }, "Book Appointment"),
         vue.createElementVNode("view", { class: "header-right" }, [
           vue.createElementVNode("image", {
-            src: _imports_1,
+            src: _imports_1$3,
             class: "bell-icon"
           })
         ])
       ]),
       vue.createCommentVNode(" Tabs "),
-      vue.createElementVNode("view", { class: "tab-container" }, [
-        vue.createElementVNode(
-          "button",
-          {
-            class: vue.normalizeClass(["tab-button", { active: $setup.activeTab === "My Appointment" }]),
-            onClick: _cache[0] || (_cache[0] = ($event) => $setup.setActiveTab("My Appointment"))
-          },
-          " My Appointment ",
-          2
-          /* CLASS */
-        ),
-        vue.createElementVNode(
-          "button",
-          {
-            class: vue.normalizeClass(["tab-button", { active: $setup.activeTab === "Consult Now" }]),
-            onClick: _cache[1] || (_cache[1] = ($event) => $setup.setActiveTab("Consult Now"))
-          },
-          " Consult Now ",
-          2
-          /* CLASS */
-        ),
-        vue.createElementVNode(
-          "button",
-          {
-            class: vue.normalizeClass(["tab-button", { active: $setup.activeTab === "History" }]),
-            onClick: _cache[2] || (_cache[2] = ($event) => $setup.setActiveTab("History"))
-          },
-          " History ",
-          2
-          /* CLASS */
-        )
-      ]),
       vue.createCommentVNode(" Appointment List "),
       vue.createElementVNode("view", { class: "appointment-list" }, [
+        vue.createElementVNode("view", { class: "subtitle" }, [
+          vue.createElementVNode("h2", null, "Available Doctors")
+        ]),
         (vue.openBlock(), vue.createElementBlock(
           vue.Fragment,
           null,
@@ -75129,10 +75900,16 @@ if (uni.restoreGlobal) {
               class: "appointment-card"
             }, [
               vue.createElementVNode("view", { class: "card-content" }, [
-                vue.createElementVNode("image", {
-                  src: appointment.image,
-                  class: "doctor-image"
-                }, null, 8, ["src"]),
+                vue.createElementVNode("view", { class: "image-container" }, [
+                  vue.createElementVNode("image", {
+                    src: appointment.image,
+                    class: "doctor-image"
+                  }, null, 8, ["src"]),
+                  appointment.live === "True" ? (vue.openBlock(), vue.createElementBlock("view", {
+                    key: 0,
+                    class: "live-badge"
+                  }, " LIVE ")) : vue.createCommentVNode("v-if", true)
+                ]),
                 vue.createElementVNode("view", { class: "appointment-info" }, [
                   vue.createElementVNode(
                     "text",
@@ -75147,61 +75924,37 @@ if (uni.restoreGlobal) {
                     vue.toDisplayString(appointment.specialty),
                     1
                     /* TEXT */
-                  ),
-                  appointment.status === "HAPPEN NOW" ? (vue.openBlock(), vue.createElementBlock("text", {
-                    key: 0,
-                    class: "appointment-status"
-                  }, " HAPPEN NOW ")) : (vue.openBlock(), vue.createElementBlock(
-                    "text",
-                    {
-                      key: 1,
-                      class: "appointment-time"
-                    },
-                    vue.toDisplayString(appointment.date) + " • " + vue.toDisplayString(appointment.time),
-                    1
-                    /* TEXT */
-                  ))
+                  )
                 ]),
                 vue.createElementVNode("view", { class: "appointment-actions" }, [
-                  vue.createElementVNode("button", { class: "consult-button" }, "Consult Now")
+                  vue.createElementVNode("button", {
+                    class: "consult-button",
+                    onClick: $setup.bookappointment
+                  }, "Set Appointment")
                 ])
               ]),
-              vue.createCommentVNode(" Reschedule and Cancel Buttons "),
-              appointment.status !== "HAPPEN NOW" ? (vue.openBlock(), vue.createElementBlock("view", {
-                key: 0,
-                class: "extra-actions"
-              }, [
-                vue.createElementVNode("button", { class: "reschedule-action" }, "Reschedule"),
-                vue.createElementVNode("view", { class: "divider" }),
-                vue.createElementVNode("button", { class: "cancel-action" }, "Cancel")
-              ])) : vue.createCommentVNode("v-if", true)
+              vue.createCommentVNode(" Reschedule and Cancel Buttons ")
             ]);
           }),
           64
           /* STABLE_FRAGMENT */
         ))
       ]),
-      vue.createElementVNode("view", { class: "footer" }, [
-        vue.createVNode($setup["mybutton"], {
-          text: "Book An Appointment",
-          class: "appointment-button"
-        }),
-        vue.createElementVNode("view", { class: "icon-container" }, [
-          vue.createElementVNode("image", {
-            src: _imports_2,
-            class: "bell-icon"
-          })
-        ])
-      ])
+      vue.createElementVNode("view", { class: "footer" })
     ]);
   }
-  const PagesTelemedicineBookappointment = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__scopeId", "data-v-d028bd7a"], ["__file", "C:/Job/PatientApp/pages/telemedicine/Bookappointment.vue"]]);
+  const PagesTelemedicineBookappointment = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__scopeId", "data-v-b54104cc"], ["__file", "C:/Job/PatientApp/pages/telemedicine/bookappointment.vue"]]);
   __definePage("pages/login/index", PagesLoginIndex);
   __definePage("pages/login/login", PagesLoginLogin);
   __definePage("pages/home/index", PagesHomeIndex);
   __definePage("pages/login/logincompile", PagesLoginLogincompile);
   __definePage("pages/telemedicine/index", PagesTelemedicineIndex);
-  __definePage("pages/telemedicine/Bookappointment", PagesTelemedicineBookappointment);
+  __definePage("pages/telemedicine/video", PagesTelemedicineVideo);
+  __definePage("pages/telemedicine/patientdetails", PagesTelemedicinePatientdetails);
+  __definePage("pages/telemedicine/chat", PagesTelemedicineChat);
+  __definePage("pages/telemedicine/doctordetails", PagesTelemedicineDoctordetails);
+  __definePage("pages/telemedicine/completeAppointment", PagesTelemedicineCompleteAppointment);
+  __definePage("pages/telemedicine/bookappointment", PagesTelemedicineBookappointment);
   const _sfc_main = {
     globalData: {
       statusBarHeight: 0
