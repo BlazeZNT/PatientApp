@@ -4,50 +4,13 @@
 		  <view class="header-left">
 			<image src="/static/arrow-left.png" class="back-arrow" @click="goBack"/>
 		  </view>
-		  <text class="title">Doctor Details</text>
+		  <text class="title">Reschedule</text>
 		  <view class="header-right">
 			<image src="/static/bell.png" class="bell-icon" />
 		  </view>
 		</view>
 		<view class="containerbox">
 			<!-- Doctor Info Section -->
-				<view class="doctor-info">
-				  <image src="/static/doctor2.png" class="doctor-image" />
-				  <text class="live-badge">LIVE</text>
-				  <text class="doctor-name">Dr. Richardson</text>
-				  <view class="doctor-rating">
-					<text class="doctor-specialty">Immunologist</text>
-					<text class="rating">★ 4.5</text>
-				  </view>
-				</view>
-			
-				<!-- Health Complaints Section -->
-				<view class="form-group">
-				  <text class="label">Tell your health complaints</text>
-				  <textarea
-					class="textarea"
-					placeholder="Describe your health complaints..."
-					v-model="formData.complaints"
-				  ></textarea>
-				</view>
-			
-				<view class="medical-record">
-				  <!-- Heart Rate Card -->
-				  <view class="record-card">
-				    <view class="heartcard">
-				      <text class="record-label">Heart Rate</text>
-				      <image src="/static/appointment/heartbeat.png" alt="heart" class="icon" />
-				    </view>
-				    <text class="record-value">120 <text class="unit">bpm</text></text>
-				  </view>
-				
-				  <!-- Add Others Card -->
-				  <view class="add-card">
-				    <image src="/static/appointment/heartbeat.png" alt="add" class="add-icon" />
-				    <text class="add-label">Add others</text>
-				  </view>
-				</view>
-			
 				<!-- Select Date Section -->
 				<view class="select-date">
 				  <text class="label">Select Date</text>
@@ -73,7 +36,8 @@
 				  </view>
 		</view>
 		<view class="footer">
-			<mybutton text="Book An Appointment" class="appointment-button" @click="handleNextClick" />
+			<mybutton text="Submit" class="appointment-button" @click="handleNextClick" />
+			<mybutton text="Chat to doctor's assistant" class="assistant-button" @click="goaichat" />
 		</view>
 
     </view>
@@ -92,7 +56,7 @@ const formData = reactive({
 });
 
 const days = [7, 14, 21, 28];
-const timeSlots = ["08:00", "10:00", "14:00", "16:00"];
+const timeSlots = ["08:00", "10:00", "14:00", "16:00","18:00", "20:00", "22:00", "24:00"];
 const selectedDay = reactive({ value: 7 });
 const selectedTime = ref('08:00');
 
@@ -108,6 +72,12 @@ const selectTime = (time) => {
 const handleNextClick = () => {
 	uni.navigateTo({
 		url: '/pages/telemedicine/completeAppointment'
+	})
+}
+
+const goaichat = () => {
+	uni.navigateTo({
+		url: '/pages/telemedicine/reschedule/aichat'
 	})
 }
 </script>
@@ -166,146 +136,6 @@ const handleNextClick = () => {
 	padding: 30rpx;
 }
 
-.doctor-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.doctor-image {
-  width: 200rpx;
-  height: 200rpx;
-  margin-bottom: 10px;
-  border: 4px solid white;
-
-}
-
-.doctor-name {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.doctor-specialty {
-  font-size: 14px;
-  color: gray;
-}
-
-.doctor-rating {
-  display: flex;
-  align-items: center;
-  gap: 20rpx;
-}
-
-.live-badge {
-  background-color: red;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 5px;
-  font-size: 12px;
-}
-
-.rating {
-  color: gold;
-  font-size: 14px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.label {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-  display: block; /* Ensures label behaves as a block element */
-}
-
-.textarea {
-  width: 100%;
-  height: 60px;
-  padding: 10px; /* Add padding inside the textarea */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  background-color: white;
-  box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
-  resize: none; /* Prevent resizing if not needed */
-}
-
-.medical-record {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.record-card,
-.add-card {
-  flex: 1;
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.record-card {
-  width: 60%;
-}
-
-.add-card {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.heartcard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-}
-
-.record-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-}
-
-.record-value {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: black;
-}
-
-.unit {
-  font-size: 16px;
-  color: gray;
-}
-
-.add-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.add-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: blue;
-}
-
 .select-date {
   margin-bottom: 20px;
 }
@@ -332,24 +162,37 @@ const handleNextClick = () => {
 
 .time-slots {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  gap: 10px; /* Spacing between buttons */
+  justify-content: space-between; /* Adjust spacing between items */
 }
 
 .time-slot {
-  flex: 1;
+  width: calc(25% - 10px); /* Ensure 4 buttons fit per row with gap adjustment */
   text-align: center;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  border-radius: 30px; /* Increased border-radius for more rounded corners */
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-size: 14px;
+  padding: 0; /* Adjust for better button height */
+  box-sizing: border-box; /* Ensure padding is included in the button width */
+  color: black;
 }
 
 .time-slot.selected {
-  background-color: #0034EE; /* Blue background for selected state */
+  background-color: #0034EE;
   color: white;
   border-color: #0034EE;
+}
+
+.appointment-button{
+	margin-bottom: 10px;
+}
+
+.assistant-button{
+	color: #0034EE;
+	background-color: white;
 }
 </style>

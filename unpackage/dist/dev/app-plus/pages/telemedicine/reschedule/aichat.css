@@ -1,0 +1,373 @@
+
+/* Calendar Container Styling */
+.calendar-container[data-v-1e252fb2] {
+	width: auto;
+	margin: auto;
+	margin-bottom: 10px;
+	padding: 20px;
+	background: transparent;
+	color: black;
+	border-radius: 12px;
+	font-family: Arial, sans-serif;
+}
+.calendar-header[data-v-1e252fb2] {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.month-date[data-v-1e252fb2] {
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+.nav-button[data-v-1e252fb2] {
+	background: transparent;
+	color: #1a1d21;
+	border: none;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+.calendar-weekdays[data-v-1e252fb2] {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+}
+.weekday[data-v-1e252fb2] {
+	flex: 1;
+	text-align: center;
+}
+.calendar-dates[data-v-1e252fb2] {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr); /* Ensure 7 columns for the week */
+	gap: 10px; /* Add space between the dates */
+}
+.date[data-v-1e252fb2] {
+	width: 100%; /* Automatically resize based on the grid cell size */
+	aspect-ratio: 1; /* Ensure the date stays a perfect square */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%; /* Make it a circle */
+	cursor: pointer;
+	transition: color 0.3s ease, background-color 0.3s ease;
+	font-size: 1rem; /* Responsive font size */
+	color: black; /* Default text color */
+	margin: auto;
+}
+.date.past[data-v-1e252fb2] {
+	color: lightgray; /* Past dates are red */
+}
+.date.past.selected[data-v-1e252fb2] {
+	color: red;
+	background-color: transparent;
+}
+.date.today.selected[data-v-1e252fb2] {
+	background-color: #58ffcf;
+	color: black;
+}
+.date.selected[data-v-1e252fb2] {
+	font-weight: bold;
+	background-color: #0034ee;
+	color: white;
+}
+
+/* .date.today {
+	background-color: #0034ee;
+	color: white;
+} */
+.date.empty-slot[data-v-1e252fb2] {
+	visibility: hidden;
+	pointer-events: none;
+}
+
+
+.consultation-page[data-v-0670efcf] {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.header[data-v-0670efcf] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+}
+.docstuff[data-v-0670efcf]{
+	display: flex;
+	flex-direction: column;
+}
+.header-button[data-v-0670efcf]{
+	display: flex;
+	flex-direction: row;
+	gap: 2px;
+	align-items: center;
+}
+.finish-button[data-v-0670efcf] {
+  display: flex;
+  background-color: red;
+  border-radius: 15px; /* Slightly less rounded for slimmer appearance */
+  font-weight: bold;
+  font-size: 12px; /* Reduced font size */
+  padding: 5px 10px; /* Reduced padding for slimmer button */
+  min-width: 60px; /* Optional: Define a minimum width */
+  max-height: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.video[data-v-0670efcf]{
+  display: flex;
+  background-color: #DBEDFF;
+  border-radius: 15px; /* Slightly less rounded for slimmer appearance */
+  font-weight: bold;
+  font-size: 12px; /* Reduced font size */
+  padding: 5px 10px; /* Reduced padding for slimmer button */
+  width: auto;
+  max-height: 30px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+.button-icon[data-v-0670efcf] {
+  width: 20px;
+  height: 20px;
+}
+.doctor-info[data-v-0670efcf] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.doctor-image-container[data-v-0670efcf] {
+  position: relative; /* Parent container for the green dot */
+  width: 50px;
+  height: 50px;
+}
+.doctor-image[data-v-0670efcf] {
+  width: 100%;
+  height: 100%;
+}
+.green-dot[data-v-0670efcf] {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00; /* Green color */
+  border-radius: 50%;
+  bottom: -3px; /* Adjust positioning */
+  right: -3px; /* Adjust positioning */
+  border: 2px solid white; /* Optional border for better contrast */
+}
+.doctor-name[data-v-0670efcf] {
+  font-size: 16px;
+  font-weight: bold;
+}
+.doctor-specialty[data-v-0670efcf] {
+  font-size: 14px;
+  color: gray;
+}
+.chat-section[data-v-0670efcf] {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  width: 100%; /* Ensure the chat section spans the full width */
+}
+.chat-bubble[data-v-0670efcf] {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.doctor-bubble[data-v-0670efcf] {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+.user-bubble[data-v-0670efcf] {
+  background-color: #605EF0;
+  color: white;
+  align-self: flex-end;
+}
+.reply-button[data-v-0670efcf] {	
+  align-self: flex-start;
+  width: auto; /* Auto width for dynamic sizing */
+  background-color: #0034EE;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+}
+.button-group[data-v-0670efcf] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-content[data-v-0670efcf] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-title[data-v-0670efcf] {
+  font-size: 16px;
+  font-weight: bold;
+}
+.card-value[data-v-0670efcf] {
+  font-size: 24px;
+  font-weight: bold;
+}
+.unit[data-v-0670efcf] {
+  font-size: 16px;
+  color: gray;
+}
+.prescription-card[data-v-0670efcf] {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px auto;
+  width: 100%;
+}
+.prescription-item[data-v-0670efcf] {
+  margin-left: 10px;
+  font-size: 14px;
+  color: black;
+}
+.get-medicine-button[data-v-0670efcf] {
+  background-color: blue;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.medicine-box[data-v-0670efcf]{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.medicine-box[data-v-0670efcf]:first-of-type {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+.input-section[data-v-0670efcf] {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+.home-icon[data-v-0670efcf] {
+  width: 40px;
+  height: 40px;
+}
+.chat-input[data-v-0670efcf] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.send-icon[data-v-0670efcf] {
+  width: 24px;
+  height: 24px;
+}
+.record-card[data-v-0670efcf]{
+  flex: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+.record-card[data-v-0670efcf] {
+  width: 45%;
+}
+.heartcard[data-v-0670efcf] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.icon[data-v-0670efcf] {
+  width: 50px;
+  height: 50px;
+}
+.record-label[data-v-0670efcf] {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+.record-value[data-v-0670efcf] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+uni-button[data-v-0670efcf]:after {
+    content: none !important;
+}
+.button-bubble[data-v-0670efcf] {
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Remove left and right padding */
+  border-radius: 0; /* Remove border radius if needed */
+  align-self: stretch; /* Ensure the bubble spans the full width */
+}
+.date-button-row[data-v-0670efcf] {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  gap: 10px; /* Add space between buttons */
+  margin-bottom: 10px; /* Add spacing between rows */
+}
+.date-button[data-v-0670efcf] {
+  flex: 1; /* Equal size for each button */
+  background-color: #0034EE;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.calendar-bubble[data-v-0670efcf] {
+  width: 100%; /* Ensure it takes up the full width of the chat section */
+  max-width: none; /* Remove any max-width restriction */
+  border-radius: 0; /* Remove border radius */
+  padding: 0; /* Remove padding for proper alignment */
+  background-color: transparent; /* Keep background transparent to match container */
+  align-self: stretch; /* Ensure it spans across the full width */
+  background: white;
+  border-radius: 25px;
+}
+

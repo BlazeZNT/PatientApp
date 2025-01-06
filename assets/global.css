@@ -23,7 +23,6 @@
 }
 
 button {
-  background-color: #0034ee;
   color: white;
   display: flex;
   align-items: center; /* Vertically center icon and text */

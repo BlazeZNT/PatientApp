@@ -77,7 +77,7 @@ const monthAndDate = computed(() => {
 	const day = adjustedDate.getDate();
 	const year = adjustedDate.getFullYear();
 
-	return `${month} ${year} `;
+	return `${day} ${month}`;
 });
 
 // Generate all dates for the current month (with blank spaces for alignment)

@@ -43,6 +43,20 @@
 			}
 		},
 		{
+			"path" : "pages/telemedicine/reschedule/aichat",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/telemedicine/postconsultation/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path" : "pages/telemedicine/video",
 			"style": {
 				"navigationBarTitleText": "",

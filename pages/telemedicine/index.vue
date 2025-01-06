@@ -43,39 +43,70 @@
         :key="index"
         class="appointment-card"
       >
-        <view class="card-content">
-          <view class="image-container">
-            <image :src="appointment.image" class="doctor-image" />
-            <view v-if="appointment.live === 'True'" class="live-badge">
-              LIVE
-            </view>
-          </view>
-          <view class="appointment-info">
-            <text class="doctor-name">{{ appointment.name }}</text>
-            <text class="doctor-specialty">{{ appointment.specialty }}</text>
-            <text v-if="appointment.status === 'HAPPEN NOW'" class="appointment-status">
-              HAPPEN NOW
-            </text>
-            <text v-else class="appointment-time">
-              {{ appointment.date }} • {{ appointment.time }}
-            </text>
-          </view>
-          <view class="appointment-actions">
-            <button class="consult-button" @click = "routechat">Consult Now</button>
-          </view>
-        </view>
-        <!-- Reschedule and Cancel Buttons -->
-        <view v-if="appointment.status !== 'HAPPEN NOW'" class="extra-actions">
-          <button class="reschedule-action">
-            <image src="/static/Appointment/Reschedule.png" class="icon" />
-            <span class="button-text" @click="reschedule">Reschedule</span>
-          </button>
-          <view class="divider"></view>
-          <button class="cancel-action" @click="openCancelConfirmation(index)">
-            <image src="/static/Appointment/cancel.png" class="icon" />
-            <span class="button-text">Cancel</span>
-          </button>
-        </view>
+		<view v-if="activeTab === 'My Appointment'">
+			<view class="card-content">
+			  <view class="image-container">
+				<image :src="appointment.image" class="doctor-image" />
+				<view v-if="appointment.live === 'True'" class="live-badge">
+				  LIVE
+				</view>
+			  </view>
+			  <view class="appointment-info">
+				<text class="doctor-name">{{ appointment.name }}</text>
+				<text class="doctor-specialty">{{ appointment.specialty }}</text>
+				<text v-if="appointment.status === 'HAPPEN NOW'" class="appointment-status">
+				  HAPPEN NOW
+				</text>
+				<text v-else class="appointment-time">
+				  {{ appointment.date }} • {{ appointment.time }}
+				</text>
+			  </view>
+			  <view class="appointment-actions">
+				<button class="consult-button" @click = "routechat">Consult Now</button>
+			  </view>
+			</view>
+			<!-- Reschedule and Cancel Buttons -->
+			<view v-if="appointment.status !== 'HAPPEN NOW'" class="extra-actions">
+			  <button class="reschedule-action">
+				<image src="/static/Appointment/Reschedule.png" class="icon" />
+				<span class="button-text" @click="reschedule">Reschedule</span>
+			  </button>
+			  <view class="divider"></view>
+			  <button class="cancel-action" @click="openCancelConfirmation(index)">
+				<image src="/static/Appointment/cancel.png" class="icon" />
+				<span class="button-text">Cancel</span>
+			  </button>
+			</view>
+		</view>
+		<view v-else-if="activeTab === 'History' && appointment.status !== 'HAPPEN NOW'">
+			<view class="card-content">
+			  <view class="image-container">
+				<image :src="appointment.image" class="doctor-image" />
+			  </view>
+			  <view class="appointment-info">
+				<text class="doctor-name">{{ appointment.name }}</text>
+				<text class="doctor-specialty">{{ appointment.specialty }}</text>
+				<text class="appointment-time">
+				  {{ appointment.date }} • {{ appointment.time }}
+				</text>
+			  </view>
+			  <view class="appointment-actions">
+				<button class="consult-button detailbtn" @click = "routepost">Detail</button>
+			  </view>
+			</view>
+			<!-- Reschedule and Cancel Buttons -->
+			<view class="extra-actions">
+			  <button class="viewrecords">
+				<image src="/static/Appointment/rewind.png" class="icon" />
+				<span class="button-text">View Record</span>
+			  </button>
+			  <view class="divider"></view>
+			  <button class="consultagain">
+				<image src="/static/Appointment/pencil.png" class="icon" />
+				<span class="button-text">Consult Again</span>
+			  </button>
+			</view>
+		</view>
       </view>
     </view>
 
@@ -145,6 +176,7 @@ const goBack = () => {
 };
 
 const setActiveTab = (tab) => {
+  console.log(tab);
   activeTab.value = tab;
 };
 
@@ -155,9 +187,14 @@ const handleNextClick = () => {
 };
 
 const reschedule = () => {
-  console.log("hellp")
   uni.redirectTo({
     url: "/pages/telemedicine/reschedule/index",
+  });
+};
+
+const routepost = () => {
+  uni.redirectTo({
+    url: "/pages/telemedicine/postconsultation/index",
   });
 };
 
@@ -357,10 +394,14 @@ uni-button:after {
   cursor: pointer;
 }
 
+.detailbtn{
+	padding: 10rpx 45rpx;
+	
+}
+
 .extra-actions {
   display: flex;
   justify-content: space-between;
-  padding: 10rpx 20rpx;
   background-color: #f9f9f9;
   border-radius: 0 0 10rpx 10rpx;
   border-top: 1rpx solid #e0e0e0;
@@ -378,13 +419,17 @@ button {
   border-radius: 5rpx;
 }
 
-.reschedule-action {
+.reschedule-action,
+.viewrecords,
+.consultagain{
   color: #0034ee;
 }
 
 .cancel-action {
   color: #ff4d4d;
 }
+
+
 
 .icon {
   width: 24rpx; /* Adjust size for better alignment */
