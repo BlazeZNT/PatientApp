@@ -38,7 +38,7 @@
 .title[data-v-b54104cc] {
   flex: 1; /* Let the title take available space */
   text-align: center; /* Center the title text */
-  font-size: 1.125rem;
+  font-size: 19px;
   font-weight: bold;
   color: black;
 }

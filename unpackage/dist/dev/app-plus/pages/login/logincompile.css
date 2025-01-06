@@ -54,7 +54,8 @@
   border-radius: 0.625rem;
   padding: 0.9375rem;
   margin-top: 0.9375rem;
-  border: 1px solid #818898;
+  border: 1px solid rgba(129, 136, 152, 0.3); /* Feint border */
+  box-shadow: 0 0 0.15625rem rgba(129, 136, 152, 0.2); /* Optional soft shadow */
 }
 .goal-item[data-v-04ced37b] {
   display: flex;
@@ -77,12 +78,11 @@
   margin-left: 0.625rem;
 }
 .goal-title[data-v-04ced37b] {
-  font-size: 0.875rem;
-  color: #2b1a88;
+  font-size: 0.875rem; /* Larger font for title */
+  color: black;
 }
 .goal-value[data-v-04ced37b] {
   font-size: 0.875rem;
-  font-weight: bold;
   color: #818898;
 }
 .start-now-container[data-v-04ced37b] {
@@ -100,4 +100,17 @@
   border-radius: 1.40625rem;
   justify-content: center;
   align-items: center;
+}
+.icon-container[data-v-04ced37b] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f5; /* Very light grey */
+  width: 2.5rem; /* Adjust the size to make it circular */
+  height: 2.5rem; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes it a circle */
+}
+.icon[data-v-04ced37b] {
+  width: 1.5625rem; /* Adjust the icon size */
+  height: 1.5625rem;
 }

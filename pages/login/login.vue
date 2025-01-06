@@ -25,7 +25,7 @@
           <input class="input" placeholder="Gender" />
           <view class="dropdown">
             <text class="dropdown-placeholder">Fitness Goals</text>
-            <text class="dropdown-icon">▼</text>
+            <image class="dropdown-icon" src="/static/home/arrow-down.png" />
           </view>
         </view>
       </view>
@@ -45,22 +45,24 @@
       <view v-else-if="step === 3">
         <!-- Step 3: Set Your Goals -->
         <view class="list">
-          <view
-            v-for="goal in goals"
-            :key="goal.id"
-            class="list-item"
-            @click="selectGoal(goal.id)"
-          >
-            <image :src="goal.icon" class="icon" />
-            <view class="info">
-              <text class="goal-title">{{ goal.title }}</text>
-              <text class="goal-description">{{ goal.description }}</text>
-            </view>
-                  <image
-                    class="radio"
-                    :src="selectedGoal === goal.id ? '/static/checked.png' : '/static/checkbox.png'"
-                  />
-          </view>
+         <view
+           v-for="goal in goals"
+           :key="goal.id"
+           class="list-item"
+           @click="selectGoal(goal.id)"
+         >
+           <view class="icon-container">
+             <image :src="goal.icon" class="icon" />
+           </view>
+           <view class="info">
+             <text class="goal-title">{{ goal.title }}</text>
+             <text class="goal-description">{{ goal.description }}</text>
+           </view>
+           <image
+             class="radio"
+             :src="selectedGoal === goal.id ? '/static/checked.png' : '/static/checkbox.png'"
+           />
+         </view>
         </view>
       </view>
       
@@ -248,6 +250,7 @@ const selectActivity = (id) => {
   border-radius: 50rpx;
   padding: 0 20rpx;
   font-size: 28rpx;
+  box-sizing: border-box; /* Ensures padding is included within the width/height */
 }
 
 .dropdown {
@@ -266,13 +269,9 @@ const selectActivity = (id) => {
 }
 
 .dropdown-icon {
-  font-size: 28rpx;
-  color: #8c8c8c;
-}
-
-.icon{
-	height: 10px;
-	width: 10px;
+  width: 20rpx; /* Adjust size of the icon */
+  height: 20rpx; /* Keep the same as width for a square */
+  margin-left: 10rpx; /* Optional: Add some spacing from the text */
 }
 
 .footer {
@@ -303,27 +302,28 @@ const selectActivity = (id) => {
   align-items: center; /* Align items vertically */
   padding: 20rpx;
   border: 1rpx solid #d8d8d8;
-  border-radius: 10rpx;
+  border-radius: 50rpx;
   margin-bottom: 20rpx;
-  background-color: #f9f9f9;
   position: relative; /* Allows absolute positioning for the radio image */
 }
+
 
 .info {
   display: flex;
   flex-direction: column; /* Stack title and description */
   flex: 1; /* Allow the info section to take available space */
+  margin-left: 5px;
 }
 
 .goal-title {
-  font-size: 34rpx; /* Larger font for title */
-  font-weight: bold;
-  color: #2b1a88;
+  font-size: 28rpx; /* Larger font for title */
+  color: black;
+  margin-bottom: 5rpx;
 }
 
 .goal-description {
-  font-size: 28rpx; /* Smaller font for description */
-  color: #8c8c8c;
+  font-size: 12px; /* Smaller font for description */
+  color: #818898;
   margin-top: 5rpx; /* Space between title and description */
 }
 
@@ -336,10 +336,19 @@ const selectActivity = (id) => {
   transform: translateY(-50%); /* Ensure proper vertical alignment */
 }
 
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f5; /* Very light grey */
+  width: 80rpx; /* Adjust the size to make it circular */
+  height: 80rpx; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes it a circle */
+}
+
 .icon {
-  width: 50rpx; /* Adjusted size for visibility */
+  width: 50rpx; /* Adjust the icon size */
   height: 50rpx;
-  margin-right: 20rpx; /* Space between icon and text */
 }
 
 

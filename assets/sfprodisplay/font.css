@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYBLACKITALIC.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYBOLD.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Heavy Italic */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYHEAVYITALIC.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYLIGHTITALIC.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYMEDIUM.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Regular */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYREGULAR.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Semi-Bold Italic */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYSEMIBOLDITALIC.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Thin Italic */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYTHINITALIC.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Ultra-Light Italic */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFPRODISPLAYULTRALIGHTITALIC.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}

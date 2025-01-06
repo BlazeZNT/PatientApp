@@ -68,7 +68,7 @@
         <view v-if="appointment.status !== 'HAPPEN NOW'" class="extra-actions">
           <button class="reschedule-action">
             <image src="/static/Appointment/Reschedule.png" class="icon" />
-            <span class="button-text">Reschedule</span>
+            <span class="button-text" @click="reschedule">Reschedule</span>
           </button>
           <view class="divider"></view>
           <button class="cancel-action" @click="openCancelConfirmation(index)">
@@ -151,6 +151,13 @@ const setActiveTab = (tab) => {
 const handleNextClick = () => {
   uni.redirectTo({
     url: "/pages/telemedicine/bookappointment",
+  });
+};
+
+const reschedule = () => {
+  console.log("hellp")
+  uni.redirectTo({
+    url: "/pages/telemedicine/reschedule/index",
   });
 };
 
@@ -312,7 +319,7 @@ uni-button:after {
 }
 
 .doctor-name {
-  font-size: 28rpx;
+  font-size: 16px;
   font-weight: bold;
   color: black;
 }
@@ -364,8 +371,6 @@ button {
   align-items: center; /* Vertically center icon and text */
   justify-content: center; /* Horizontally center content */
   gap: 10px; /* Space between icon and text */
-/*  background: none;
-  border: none; */
   padding: 10rpx 20rpx;
   font-size: 22rpx;
   font-weight: bold;
@@ -482,5 +487,9 @@ button {
   background-color: #ffe5e5;
   color: #ff4d4d;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+uni-button:after {
+    content: none !important;
 }
 </style>

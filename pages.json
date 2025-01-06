@@ -36,6 +36,13 @@
 			}
 		},
 		{
+			"path" : "pages/telemedicine/reschedule/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path" : "pages/telemedicine/video",
 			"style": {
 				"navigationBarTitleText": "",

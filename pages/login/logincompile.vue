@@ -17,8 +17,8 @@
     <!-- Goals Summary -->
     <view class="goals-summary">
       <view v-for="goal in goals" :key="goal.title" class="goal-item">
-        <view class="goal-icon">
-          <image :src="goal.icon" />
+        <view class="icon-container">
+          <image :src="goal.icon" class="icon" />
         </view>
         <view class="goal-info">
           <text class="goal-title">{{ goal.title }}</text>
@@ -121,7 +121,8 @@ const startNow = () => {
   border-radius: 20rpx;
   padding: 30rpx;
   margin-top: 30rpx;
-  border: 1px solid #818898;
+  border: 1px solid rgba(129, 136, 152, 0.3); /* Feint border */
+  box-shadow: 0 0 5rpx rgba(129, 136, 152, 0.2); /* Optional soft shadow */
 }
 
 .goal-item {
@@ -149,13 +150,12 @@ const startNow = () => {
 }
 
 .goal-title {
-  font-size: 28rpx;
-  color: #2b1a88;
+  font-size: 28rpx; /* Larger font for title */
+  color: black;
 }
 
 .goal-value {
   font-size: 28rpx;
-  font-weight: bold;
   color: #818898;
 }
 
@@ -175,5 +175,20 @@ const startNow = () => {
   border-radius: 1.40625rem;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f5; /* Very light grey */
+  width: 80rpx; /* Adjust the size to make it circular */
+  height: 80rpx; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes it a circle */
+}
+
+.icon {
+  width: 50rpx; /* Adjust the icon size */
+  height: 50rpx;
 }
 </style>

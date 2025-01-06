@@ -37,24 +37,26 @@
 	   <view class="stats-grid">
 		  <view class="stat-card" v-for="stat in stats" :key="stat.title">
 			<div class="cardtop">
-				<text class="stat-title">{{ stat.title }}</text>
-				<view class="icon">
-				  <image :src="stat.icon" />
+				<text class="title2">{{ stat.title }}</text>
+				<view class="icon-container">
+				  <image :src="stat.icon" class="icon" />
 				</view>
 			</div>
 			<text class="stat-value">{{ stat.value }}</text>
+			<text class="stat-unit">{{ stat.unit }}</text>
 		  </view>
 		</view>
 		
-		<view class="stats-grid">
+	   <view class="stats-grid">
 		  <view class="stat-card" v-for="stat in stats" :key="stat.title">
 			<div class="cardtop">
-				<text class="stat-title">{{ stat.title }}</text>
-				<view class="icon">
-				  <image :src="stat.icon" />
+				<text class="title2">{{ stat.title }}</text>
+				<view class="icon-container">
+				  <image :src="stat.icon" class="icon" />
 				</view>
 			</div>
 			<text class="stat-value">{{ stat.value }}</text>
+			<text class="stat-unit">{{ stat.unit }}</text>
 		  </view>
 		</view>
 
@@ -74,33 +76,39 @@ const activeTab = ref("Fitness");
 // Stats data
 const stats = [
   {
-    title: "Calories Burnt",
-    value: "1.4k kCal",
+    title: "Calories\nBurnt",
+    value: "1.4k",
+	unit: " kCal",
     icon: "/static/fire.png",
   },
   {
-    title: "Distance Covered",
-    value: "3.8 km",
+    title: "Distance\nCovered",
+    value: "3.8",
+	unit: " km",
     icon: "/static/run.png",
   },
   {
-    title: "Heart Rate",
-    value: "120 bpm",
+    title: "Heart\nRate",
+    value: "120",
+	unit: " bpm",
     icon: "/static/heart.png",
   },
   {
-    title: "Sleep Quality",
-    value: "7.5 hours",
+    title: "Sleep\nQuality",
+    value: "7.5",
+	unit: " hours",
     icon: "/static/bed.png",
   },
   {
-    title: "Workout Sessions",
+    title: "Workout\nSessions",
     value: "10",
+	unit: "",
     icon: "/static/squat.png",
   },
   {
-    title: "Active Minutes",
-    value: "120 min",
+    title: "Active\nMinutes",
+    value: "120",
+	unit: " min",
     icon: "/static/walk.png",
   },
 ];
@@ -121,7 +129,9 @@ const setActiveTab = (tab) => {
 </script>
 
 <style scoped>
-	
+.title2{
+	font-size: 17px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -227,22 +237,34 @@ const setActiveTab = (tab) => {
   box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
 }
 
-.icon image {
+image {
   width: 40rpx;
   height: 40rpx;
 }
 
-.stat-title {
-  margin-top: 10rpx;
-  margin-bottom: 20rpx;
-  font-size: 24rpx;
-  color: #2b1a88;
+.stat-value {
+  font-size: 39rpx;
+  font-weight: 400;
+  color: black;
+}
+.stat-unit {
+  font-size: 15px;
+  color: #818898;
 }
 
-.stat-value {
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #2b1a88;
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f5; /* Very light grey */
+  width: 80rpx; /* Adjust the size to make it circular */
+  height: 80rpx; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes it a circle */
+}
+
+.icon {
+  width: 50rpx; /* Adjust the icon size */
+  height: 50rpx;
 }
 
 </style>

@@ -36,6 +36,9 @@
 }
 
 
+.title2[data-v-4978fed5]{
+	font-size: 17px;
+}
 .container[data-v-4978fed5] {
   display: flex;
   flex-direction: column;
@@ -126,19 +129,30 @@
   padding: 0.625rem;
   box-shadow: 0 0.0625rem 0.15625rem rgba(0, 0, 0, 0.1);
 }
-.icon uni-image[data-v-4978fed5] {
+uni-image[data-v-4978fed5] {
   width: 1.25rem;
   height: 1.25rem;
 }
-.stat-title[data-v-4978fed5] {
-  margin-top: 0.3125rem;
-  margin-bottom: 0.625rem;
-  font-size: 0.75rem;
-  color: #2b1a88;
-}
 .stat-value[data-v-4978fed5] {
-  font-size: 0.875rem;
-  font-weight: bold;
-  color: #2b1a88;
+  font-size: 1.21875rem;
+  font-weight: 400;
+  color: black;
+}
+.stat-unit[data-v-4978fed5] {
+  font-size: 15px;
+  color: #818898;
+}
+.icon-container[data-v-4978fed5] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f3f5; /* Very light grey */
+  width: 2.5rem; /* Adjust the size to make it circular */
+  height: 2.5rem; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes it a circle */
+}
+.icon[data-v-4978fed5] {
+  width: 1.5625rem; /* Adjust the icon size */
+  height: 1.5625rem;
 }
 

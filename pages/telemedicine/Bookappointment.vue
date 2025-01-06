@@ -139,7 +139,7 @@ const setActiveTab = (tab) => {
 .title {
   flex: 1; /* Let the title take available space */
   text-align: center; /* Center the title text */
-  font-size: 36rpx;
+  font-size: 19px;
   font-weight: bold;
   color: black;
 }
