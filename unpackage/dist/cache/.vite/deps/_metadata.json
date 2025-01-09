@@ -1,25 +1,15 @@
 {
-  "hash": "46096986",
-  "configHash": "bad292d4",
-  "lockfileHash": "ea911931",
-  "browserHash": "5015318c",
+  "hash": "5cf87ca0",
+  "configHash": "446259fa",
+  "lockfileHash": "46359b53",
+  "browserHash": "c0842dbb",
   "optimized": {
-    "lodash-es": {
-      "src": "../../../../../node_modules/lodash-es/lodash.js",
-      "file": "lodash-es.js",
-      "fileHash": "a9971d05",
-      "needsInterop": false
-    },
     "echarts": {
       "src": "../../../../../node_modules/echarts/index.js",
       "file": "echarts.js",
-      "fileHash": "efb5bc25",
+      "fileHash": "7ff766e0",
       "needsInterop": false
     }
   },
-  "chunks": {
-    "chunk-CSAU5B4Q": {
-      "file": "chunk-CSAU5B4Q.js"
-    }
-  }
+  "chunks": {}
 }
