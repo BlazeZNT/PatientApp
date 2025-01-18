@@ -97,6 +97,41 @@
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/fitness/daily-goals",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/fitness/morning-run",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/fitness/insight",
+			"style": { 
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/fitness/sleep-quality",
+			"style": { 
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/fitness/period",
+			"style": { 
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

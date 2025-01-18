@@ -27,18 +27,18 @@
 					@tap="leftClick"
 				>
 					<slot name="left">
-						<uv-icon
-							v-if="leftIcon"
-							:name="leftIcon"
-							:size="leftIconSize"
-							:color="leftIconColor"
-						></uv-icon>
+						<view style="padding: 8px; border-radius: 100%; background-color: #FAFAFA;">
+							<uv-icon
+								v-if="leftIcon"
+								:name="leftIcon"
+								:size="leftIconSize"
+								:color="leftIconColor"
+							></uv-icon>
+						</view>
 						<text
 							v-if="leftText"
 							:style="{
-								color: leftIconColor,
-								fontSize: '40rpx',
-								fontWeight: '800'
+								color: leftIconColor
 							}"
 							class="uv-navbar__content__left__text"
 						>{{ leftText }}</text>
